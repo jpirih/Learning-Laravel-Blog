@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'SiteController@index']);
+Route::get('o-meni', ['uses' => 'SiteController@about']);
+Route::get('kontakt',['uses' => 'SiteController@contact']);
+Route::get('nova-objava', ['uses' => 'PostController@writeNewPost']);
 
 /*
 |--------------------------------------------------------------------------
