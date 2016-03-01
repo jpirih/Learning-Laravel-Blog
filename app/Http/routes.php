@@ -15,6 +15,9 @@ Route::get('/', ['uses' => 'SiteController@index']);
 Route::get('o-meni', ['uses' => 'SiteController@about']);
 Route::get('kontakt',['uses' => 'SiteController@contact']);
 Route::get('nova-objava', ['uses' => 'PostController@writeNewPost']);
+Route::post('nova-objava', ['uses' => 'PostController@saveNewPost']);
+Route::get('objava/{id}', ['uses' => 'PostController@postDetails']);
+Route::get('zbirnik-objav', ['uses' => 'PostController@allPosts']);
 
 /*
 |--------------------------------------------------------------------------

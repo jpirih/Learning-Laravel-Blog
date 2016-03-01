@@ -15,13 +15,29 @@
 
 @section('content')
     <div class="col-sm-3">
-        Prostor za uporbne inforamcije
+       <h4>Prostor za uporabne informacije</h4>
+        <div class="alert alert-warning">
+            <p>
+                <span class="krepko">Blog v izdelavi: </span>
+                Pozdravljen/-a na mojem blogu, ki je še vedno v
+                izdealvi.
+            </p>
+            <p>
+                Trenutno omogoča pisanje novih objav, pregled posamezne objave,
+                seznam zadnjih treh, in zbirni pregled vseh objav. Se nadaljuje ...
+            </p>
+        </div>
     </div>
     <div class="col-sm-6">
-        <h2> Trenutno ni shranjenih objav </h2>
-        <p>
-            Na tem mestu bodo prikazane vse blog objave
-        </p>
+        @foreach($posts as $post)
+            <div class="well">
+
+                    <h2> {{ $post->title }} </h2>
+                    <p>
+                        {{ $post->content }}
+                    </p>
+            </div>
+        @endforeach
     </div>
     <div class="col-sm-3">
         <div>
@@ -29,6 +45,25 @@
                 Nova objava
             </a>
         </div>
-        Pregled zadnjih bojav
+        <hr>
+        <h4>Najnovejše tri</h4>
+        <table class="table table-responsive table-bordered">
+            <tr>
+                <th>Naslov</th>
+                <th>Objavlejno</th>
+            </tr>
+            @foreach($newPosts as $item)
+                <tr>
+                    <td><a href="/objava/{{ $item->id }}">{{ $item->title }}</a></td>
+                    <td>{{ $item->created_at }}</td>
+                </tr>
+            @endforeach
+
+        </table>
+
+        <a href="/zbirnik-objav" class="btn btn-primary btn-block">
+            <span class="glyphicon glyphicon-th-list"></span>
+            Pregled vseh objav
+        </a>
     </div>
 @endsection
