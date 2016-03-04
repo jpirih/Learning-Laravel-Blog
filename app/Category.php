@@ -9,6 +9,6 @@ class Category extends Model
     protected $table = ('categories');
 
     public function posts(){
-        $this->belongsToMany('App\Post', 'categories_posts');
+         return $this->belongsToMany('App\Post', 'categories_posts');
     }
 }

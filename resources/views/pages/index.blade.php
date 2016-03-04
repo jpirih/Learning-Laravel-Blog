@@ -73,7 +73,7 @@
         <!-- link na tabelo vseh objav  -->
         <a href="/zbirnik-objav" class="btn btn-primary btn-block">
             <span class="glyphicon glyphicon-th-list"></span>
-            Pregled vseh objav
+            Dashboard
         </a>
     </div>
 @endsection

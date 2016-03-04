@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Comment;
 use App\Post;
 use Illuminate\Support\Facades\Request;
@@ -12,20 +13,32 @@ class PostController extends Controller
 {
     // obrazec za vnos objav
     public function writeNewPost(){
-
-        return view('pages.new_post');
+        $categories = Category::all();
+        return view('pages.new_post', ['categories' => $categories]);
     }
     // funkcija saveNewPost shrani novo objavo v bazo podatkov
 
+    /**
+     * @return RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function saveNewPost(){
-        $post = new Post();
+        $post = new Post;
         $title = Request::get('title');
         $content = Request::get('content');
-
         $post->title = $title;
         $post->content = $content;
-
         $post->save();
+
+        $categories = Request::get('categories');
+        // preveri ce je kategorija oznacena v spremenljivko sharni id od kategorije ki je oznacena
+        if($categories != null){
+            for($i = 0; $i < count($categories); $i++){
+                $category = Category::find($categories[$i]);
+                // poveze oznacene kategorije s tem dolocenim novim postom
+                $category->posts()->attach($post->id);
+            }
+        }
+
         return redirect('/');
 
         //return 'Objava za naslvom: '.$post->title. 'je bila uspešno shranjena :) ';
@@ -51,8 +64,7 @@ class PostController extends Controller
         $comment->name = Request::get('name');
         $comment->body = Request::get('body');
 
-        // shranimo post_icd
-
+        // shranimo post_id
         $comment->post_id = $post->id;
         $comment->save();
 

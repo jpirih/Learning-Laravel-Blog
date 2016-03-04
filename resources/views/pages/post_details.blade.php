@@ -18,22 +18,31 @@
             <div class="panel-body">
                 <h3> {{ $post->title }}</h3>
                 <hr>
-                <p>
-                    <span class="krepko">Id objave: </span> {{ $post->id }}
-                </p>
-                <p>
-                    <span class="krepko">Datum nastanka: </span> {{ $post->created_at }} <br>
-                    <span class="krepko">Datum zadnje spremembe: </span> {{ $post->updated_at }}
-                </p>
-                <p>
-                    <span class="krepko">Vsebina Objave: </span> <br>
-                    {{ $post->content }}
-                </p>
+                <div class="well">
+                    <p>
+                        <span class="krepko">Id objave: </span> {{ $post->id }}
+                        <span class="krepko"> | Objavlejno: </span> {{ $post->created_at }} <br>
+                        <span class="krepko"> Spremenjeno: </span> {{ $post->updated_at }} <br>
+                        <span class="krepko">Kategorije:  </span>
+                        @foreach($post->categories as $category )
+                            <span>
+                                <span>{{ $category->name }}, </span>
+                            </span>
+                        @endforeach
+                    </p>
+                    <hr>
+                    <span class="krepko">Vsebina Objave: </span>
+                    <p>
+                        {{ $post->content }}
+                    </p>
+                </div>
+
+
             </div>
             <div class="panel-footer">
                 <a href="/zbirnik-objav" class="btn btn-primary">
                     <span class="glyphicon glyphicon-th-list"></span>
-                    Pregled vseh objav
+                    Dashboard
                 </a>
                 <a href="/" class="btn btn-success">
                     <span class="glyphicon glyphicon-home"></span>
@@ -57,7 +66,7 @@
                 <h4>Napiši Komentar</h4>
                 <div class="row">
                     <div class="col-sm-12">
-                        <form action="/objava/{{ $post->id }}/komentiraj" method="post" class="form-horizontal">
+                        <form action="{{ route('save_comment', ['id' => $post->id]) }}" method="post" class="form-horizontal">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="form-group">
                                 <label for="name" class="col-sm-2 control-label">Zadeva</label>
@@ -77,6 +86,7 @@
                             <div class="form-group">
                                 <div class="col-sm-8 col-sm-offset-2">
                                     <button type="submit" class="btn btn-success btn-block">
+                                        <span class="glyphicon glyphicon-pencil"></span>
                                         Kmentiraj
                                     </button>
                                 </div>

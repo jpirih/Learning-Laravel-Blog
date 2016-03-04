@@ -30,7 +30,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('kontakt',['uses' => 'SiteController@contact']);
     Route::get('nova-objava', ['uses' => 'PostController@writeNewPost', 'as' => 'new_post']);
     Route::post('nova-objava', ['uses' => 'PostController@saveNewPost']);
-    Route::get('objava/{id}', ['uses' => 'PostController@postDetails', 'as' =>'details']);
-    Route::get('zbirnik-objav', ['uses' => 'PostController@allPosts']);
-    Route::post('objava/{id}/komentiraj', ['uses' => 'PostController@saveComment', 'as' => 'save.comment']);
+    Route::get('objava/{id}', ['uses' => 'PostController@postDetails', 'as' => 'details']);
+    Route::get('zbirnik-objav', ['uses' => 'PostController@allPosts', 'as' => 'dashboard']);
+    Route::post('objava/{id}/komentiraj', ['uses' => 'PostController@saveComment', 'as' => 'save_comment']);
 });
