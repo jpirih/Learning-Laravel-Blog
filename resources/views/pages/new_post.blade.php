@@ -16,6 +16,7 @@
 @section('content')
     <div class="col-sm-6 col-sm-offset-3">
         <form action="" method="post">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <label for="title">Naslov</label>
                 <input type="text" id="title" name="title" class="form-control">

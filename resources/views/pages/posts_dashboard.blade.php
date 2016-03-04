@@ -15,7 +15,7 @@
 
 @section('content')
     <div class="col-sm-8 col-sm-offset-2">
-        <table class="table table-bordered table-responsive">
+        <table class="table table-bordered table-responsive table-striped">
             <tr>
                 <th># Id</th>
                 <th>Naslov</th>
@@ -25,7 +25,7 @@
            @foreach($posts as $post)
                <tr>
                    <td>{{ $post->id }}</td>
-                   <td><a href="/objava/{{ $post->id }}">{{ $post->title }}</a></td>
+                   <td><a href="{{ route('details', ['id' => $post->id]) }}">{{ $post->title }}</a></td>
                    <td>{{ $post->created_at }}</td>
                    <td>{{ $post->updated_at }}</td>
                </tr>
