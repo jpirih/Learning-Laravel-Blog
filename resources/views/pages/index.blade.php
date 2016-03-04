@@ -33,19 +33,35 @@
     <!--  osrednji del seznam vseh objav veliki modri box-i-->
     <div class="col-sm-6">
         <!-- za prikazovanje skrbi SiteController -> funkcija index() -->
-        @foreach($posts as $post)
-            <div class="well post">
-                    <h2> {{ $post->title }} </h2>
-                    <p>
-                        {{ $post->content }}
-                    </p>
-                <p>
-                    <a href="{{ route('details', ['id' => $post->id]) }}" class="btn-primary btn">
-                        Podrobnosti ...
-                    </a>
-                </p>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                @if(count($posts)== 0)
+                    <div class="well">
+                        <h2> Ni objav </h2>
+                        <p>
+                            Pred dodajanjem nove objave poglje Dashboard
+                            če so dodane kategorije. Če jih želiiš jih tam lahko dodaš
+                            Za pisanje prve objave  pa klikni gumb nova objavi
+                        </p>
+                    </div>
+                @else
+                    @foreach($posts as $post)
+                        <div class="well">
+                            <h2> {{ $post->title }} </h2>
+                            <p>
+                                {{ $post->content }}
+                            </p>
+                            <p>
+                                <a href="{{ route('details', ['id' => $post->id]) }}" class="btn-primary btn">
+                                    Podrobnosti ...
+                                </a>
+                            </p>
+                        </div>
+                    @endforeach
+                @endif
             </div>
-        @endforeach
+        </div>
+
     </div>
     <!-- desni meni Gumb za nove objave -->
     <div class="col-sm-3">

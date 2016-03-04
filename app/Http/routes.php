@@ -32,5 +32,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('nova-objava', ['uses' => 'PostController@saveNewPost']);
     Route::get('objava/{id}', ['uses' => 'PostController@postDetails', 'as' => 'details']);
     Route::get('zbirnik-objav', ['uses' => 'PostController@allPosts', 'as' => 'dashboard']);
-    Route::post('objava/{id}/komentiraj', ['uses' => 'PostController@saveComment', 'as' => 'save_comment']);
+    Route::post('create-category', ['uses' => 'PostController@saveCategory', 'as' => 'crete_category']);
+    Route::post('objava/{id}/comment', ['uses' => 'PostController@saveComment', 'as' => 'save_comment']);
+    Route::get('objava/{id}/update', ['uses' => 'PostController@editPost', 'as' => 'edit_post']);
+    Route::post('objava/{id}/update', ['uses' => 'PostController@updatePost', 'as' => 'update_post']);
 });

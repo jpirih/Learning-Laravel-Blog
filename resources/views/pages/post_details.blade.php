@@ -40,7 +40,7 @@
 
             </div>
             <div class="panel-footer">
-                <a href="/zbirnik-objav" class="btn btn-primary">
+                <a href="{{ route('dashboard') }}" class="btn btn-primary">
                     <span class="glyphicon glyphicon-th-list"></span>
                     Dashboard
                 </a>
@@ -48,22 +48,35 @@
                     <span class="glyphicon glyphicon-home"></span>
                     Domov
                 </a>
+                <a href="{{ route('edit_post', ['id' => $post->id]) }}" class="btn btn-info">
+                    <span class="glyphicon glyphicon-edit"></span>
+                    Uredi
+                </a>
             </div>
         </div>
         <div class="panel panel-primary">
             <div class="panel-body">
-                <h4>Komentariji</h4>
+                <h3>Komentariji</h3>
+                @if(count($post->comments) == 0)
+                    <div class="well">
+                        <p>
+                            Za to objavo ni komentarjev Bodi prvi in napiši komentar
+                        </p>
+                    </div>
+                @else
+                    @foreach($post->comments as $comment)
+                        <div class="well">
+                            <h4>{{ $comment->name }}</h4>
+                            <p>
+                                {{ $comment->body }}
+                            </p>
+                        </div>
+                    @endforeach
+                @endif
 
-                @foreach($post->comments as $comment)
-                <div class="well">
-                    <h4>{{ $comment->name }}</h4>
-                    <p>
-                        {{ $comment->body }}
-                    </p>
-                </div>
-                @endforeach
+
                 <hr>
-                <h4>Napiši Komentar</h4>
+                <h3>Napiši Komentar</h3>
                 <div class="row">
                     <div class="col-sm-12">
                         <form action="{{ route('save_comment', ['id' => $post->id]) }}" method="post" class="form-horizontal">

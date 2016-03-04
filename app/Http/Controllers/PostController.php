@@ -12,15 +12,16 @@ use Illuminate\Http\RedirectResponse;
 class PostController extends Controller
 {
     // obrazec za vnos objav
+    // zraven posljem podatke o kategorijah, ki jih lahko zbiras
     public function writeNewPost(){
         $categories = Category::all();
         return view('pages.new_post', ['categories' => $categories]);
     }
-    // funkcija saveNewPost shrani novo objavo v bazo podatkov
 
     /**
      * @return RedirectResponse|\Illuminate\Routing\Redirector
      */
+    // funkcija saveNewPost shrani novo objavo v bazo podatkov
     public function saveNewPost(){
         $post = new Post;
         $title = Request::get('title');
@@ -28,7 +29,7 @@ class PostController extends Controller
         $post->title = $title;
         $post->content = $content;
         $post->save();
-
+        // post je treba najprej shraniti da ima svoj id sele potem povezujem kategorije
         $categories = Request::get('categories');
         // preveri ce je kategorija oznacena v spremenljivko sharni id od kategorije ki je oznacena
         if($categories != null){
@@ -38,10 +39,7 @@ class PostController extends Controller
                 $category->posts()->attach($post->id);
             }
         }
-
         return redirect('/');
-
-        //return 'Objava za naslvom: '.$post->title. 'je bila uspešno shranjena :) ';
     }
 
     // podrobnosti posamezne objave
@@ -49,11 +47,36 @@ class PostController extends Controller
         $post = Post::find($id);
         return view('pages.post_details', ['post' => $post]);
     }
-    // pregled vseh objav - tabela
-    public function allPosts(){
-        $posts = Post::all();
-        return view('pages.posts_dashboard', ['posts' => $posts]);
+    public function editPost($id){
+        $post = Post::find($id);
+        $categories = Category::all();
+        return view('pages.edit_post', ['post' => $post, 'categories' => $categories]);
     }
+
+    // urejanje objav update_post
+    public function updatePost($id){
+        $post = Post::find($id);
+        $title = Request::get('title');
+        $content = Request::get('content');
+        $categories = Request::get('categories');
+
+
+        // Ce oznacis kategorije jih doda k prejsnjim
+        if($categories != null){
+            for($i = 0; $i < count($categories); $i++){
+                $category = Category::find($categories[$i]);
+                $category->posts()->attach($post->id);
+            }
+        }
+        // post update
+        $post->title = $title;
+        $post->content = $content;
+        $post->save();
+
+        return redirect('/');
+    }
+
+
 
     public function saveComment($postId){
         // pridobi podatke iz baze za posmezen post
@@ -64,12 +87,28 @@ class PostController extends Controller
         $comment->name = Request::get('name');
         $comment->body = Request::get('body');
 
-        // shranimo post_id
+        // shranimo povezavo coment - post preko post_id
         $comment->post_id = $post->id;
         $comment->save();
 
         return redirect('objava/'.$postId);
+    }
 
+    // pregled vseh objav - tabela
+    public function allPosts(){
+        $posts = Post::all();
+        $categories = Category::all();
+        return view('pages.posts_dashboard', ['posts' => $posts, 'categories' => $categories]);
+    }
 
+    // funkcija za dodajanje novih kategorij - na dashbordu
+    public function saveCategory(){
+        $category = new Category;
+
+        $name = Request::get('category_name');
+        $category->name = $name;
+        $category->save();
+
+        return redirect(route('dashboard'));
     }
 }
