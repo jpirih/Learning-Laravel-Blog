@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Comment;
 use App\Post;
+use Carbon\Carbon;
+use Faker\Provider\zh_TW\DateTime;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
+use Jenssegers\Date\Date;
 
 class PostController extends Controller
 {
@@ -24,11 +27,18 @@ class PostController extends Controller
     // funkcija saveNewPost shrani novo objavo v bazo podatkov
     public function saveNewPost(){
         $post = new Post;
+        $datePublished = Request::get('date_published');
+        // pretvri tekst v datum 
+         $datePublished = strtotime($datePublished);
+        $date= date('Y-m-d', $datePublished);
+        // shranjevanje podatkov 
         $title = Request::get('title');
         $content = Request::get('content');
         $post->title = $title;
         $post->content = $content;
+        $post->date_published = $date;
         $post->save();
+        
         // post je treba najprej shraniti da ima svoj id sele potem povezujem kategorije
         $categories = Request::get('categories');
         // preveri ce je kategorija oznacena v spremenljivko sharni id od kategorije ki je oznacena
@@ -44,7 +54,11 @@ class PostController extends Controller
 
     // podrobnosti posamezne objave
     public function postDetails($id){
+
         $post = Post::find($id);
+        Carbon::setLocale( "sl");
+        $datum = strtotime($post->date_published);
+        $post->date_published = date('d.M.Y', $datum);
         return view('pages.post_details', ['post' => $post]);
     }
     public function editPost($id){
@@ -96,7 +110,15 @@ class PostController extends Controller
 
     // pregled vseh objav - tabela
     public function allPosts(){
+        Carbon::setLocale('sl');
         $posts = Post::all();
+
+        foreach ($posts as $post)
+        {
+            $date = strtotime($post->date_published);
+            $post->date_published = date('d.M.Y', $date);
+        }
+
         $categories = Category::all();
         return view('pages.posts_dashboard', ['posts' => $posts, 'categories' => $categories]);
     }

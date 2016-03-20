@@ -22,29 +22,29 @@
     <br>
     <!-- TAbela osnovni podatki -->
     <div class=>
-        <table class="table table-bordered table-responsive">
+        <table class="table table-responsive table-bordered table-striped">
             <tr>
-                <th colspan="2">Osnovni Podatki</th>
+                <th colspan="2" class="glava">Osnovni Podatki</th>
             </tr>
             <tbody>
             <tr>
-                <td class="krepko">Izobrazba</td>
+                <td class="krepko glava">Izobrazba</td>
                 <td>diplomirani ekonomist (VS) - brez prakse</td>
             </tr>
             <tr>
-                <td class="krepko">Domači Kraj</td>
+                <td class="krepko glava">Domači Kraj</td>
                 <td>Podlanišče</td>
             </tr>
             <tr>
-                <td class="krepko">Občina</td>
+                <td class="krepko glava">Občina</td>
                 <td>Cerkno</td>
             </tr>
             <tr>
-                <td class="krepko">Upravna enota</td>
+                <td class="krepko glava">Upravna enota</td>
                 <td>Idrija</td>
             </tr>
             <tr>
-                <td class="krepko">Rojen</td>
+                <td class="krepko glava">Rojen</td>
                 <td>20.8.1988</td>
             </tr>
             </tbody>

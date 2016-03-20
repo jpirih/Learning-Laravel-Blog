@@ -52,12 +52,17 @@
                                 {{ $post->content }}
                             </p>
                             <p>
+                                <sapn class="krepko">Datum objave: </sapn> {{ $post->date_published }}
+                            </p>
+                            <p>
                                 <a href="{{ route('details', ['id' => $post->id]) }}" class="btn-primary btn">
                                     Podrobnosti ...
                                 </a>
                             </p>
                         </div>
                     @endforeach
+                            <!-- linki za paginacijo postov -->
+                    {!! $posts->links() !!}
                 @endif
             </div>
         </div>
@@ -74,14 +79,14 @@
         <!-- tabela najnovejši trije za prikazovanje skrbi SiteController ->index funkcija -->
         <h4>Najnovejše tri</h4>
         <table class="table table-responsive table-bordered">
-            <tr>
+            <tr class="glava">
                 <th>Naslov</th>
-                <th>Objavlejno</th>
+                <th>Napisano</th>
             </tr>
             @foreach($newPosts as $item)
                 <tr>
                     <td><a href="{{ route('details', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
-                    <td>{{ $item->created_at }}</td>
+                    <td>{{ $item->created_at}}</td>
                 </tr>
             @endforeach
 

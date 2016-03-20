@@ -21,8 +21,9 @@
                 <div class="well">
                     <p>
                         <span class="krepko">Id objave: </span> {{ $post->id }}
-                        <span class="krepko"> | Objavlejno: </span> {{ $post->created_at }} <br>
-                        <span class="krepko"> Spremenjeno: </span> {{ $post->updated_at }} <br>
+                        <span class="krepko"> | Napisano: </span> {{ $post->created_at->format('d.M.Y H:i:s') }} <br>
+                        <span class="krepko">Objavljeno:</span> {{ $post->date_published}}<br>
+                        <span class="krepko"> Zadnja sprememba: </span> {{ $post->updated_at->diffForHumans()}} <br>
                         <span class="krepko">Kategorije:  </span>
                         @foreach($post->categories as $category )
                             <span>
