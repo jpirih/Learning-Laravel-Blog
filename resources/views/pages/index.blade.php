@@ -32,6 +32,12 @@
     </div>
     <!--  osrednji del seznam vseh objav veliki modri box-i-->
     <div class="col-sm-6">
+        @if(session('status'))
+                <div class="alert alert-success">
+                    <span class="glyphicon glyphicon-check"></span>
+                    {{session('status')}}
+                </div>
+        @endif
         <!-- za prikazovanje skrbi SiteController -> funkcija index() -->
         <div class="panel panel-primary">
             <div class="panel-body">

@@ -17,6 +17,16 @@
     <div class="col-sm-4 col-sm-offset-2">
         <h2>Kategorije</h2>
         <br>
+        <!-- create new dategory form validation  -->
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <table class="table table-bordered table-responsive table-striped">
             <thead>
             <tr>

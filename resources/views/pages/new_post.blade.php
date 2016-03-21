@@ -17,6 +17,16 @@
     <div class="col-sm-6 col-sm-offset-3">
         <div class="panel panel-primary">
             <div class="panel-body">
+                <!-- form validation error -->
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
                 <!-- PostController funkcija ->savePost() -->
                 <form action="" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">

@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Comment;
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\StoreCommenttRequest;
+use App\Http\Requests\StorePostRequest;
 use App\Post;
 use Carbon\Carbon;
 use Faker\Provider\zh_TW\DateTime;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
-use Jenssegers\Date\Date;
 
 class PostController extends Controller
 {
@@ -21,26 +23,23 @@ class PostController extends Controller
         return view('pages.new_post', ['categories' => $categories]);
     }
 
-    /**
-     * @return RedirectResponse|\Illuminate\Routing\Redirector
-     */
     // funkcija saveNewPost shrani novo objavo v bazo podatkov
-    public function saveNewPost(){
+    public function saveNewPost(StorePostRequest $request ){
         $post = new Post;
-        $datePublished = Request::get('date_published');
+        $datePublished = $request->get('date_published');
         // pretvri tekst v datum 
          $datePublished = strtotime($datePublished);
         $date= date('Y-m-d', $datePublished);
         // shranjevanje podatkov 
-        $title = Request::get('title');
-        $content = Request::get('content');
+        $title = $request->get('title');
+        $content = $request->get('content');
         $post->title = $title;
         $post->content = $content;
         $post->date_published = $date;
         $post->save();
         
         // post je treba najprej shraniti da ima svoj id sele potem povezujem kategorije
-        $categories = Request::get('categories');
+        $categories = $request->get('categories');
         // preveri ce je kategorija oznacena v spremenljivko sharni id od kategorije ki je oznacena
         if($categories != null){
             for($i = 0; $i < count($categories); $i++){
@@ -49,7 +48,7 @@ class PostController extends Controller
                 $category->posts()->attach($post->id);
             }
         }
-        return redirect('/');
+        return redirect('/')->with('status', 'Objava: '.$post->title.' je bila uspešno shranjena');
     }
 
     // podrobnosti posamezne objave
@@ -68,12 +67,11 @@ class PostController extends Controller
     }
 
     // urejanje objav update_post
-    public function updatePost($id){
+    public function updatePost(StorePostRequest $request, $id){
         $post = Post::find($id);
-        $title = Request::get('title');
-        $content = Request::get('content');
-        $categories = Request::get('categories');
-
+        $title = $request->get('title');
+        $content = $request->get('content');
+        $categories = $request->get('categories');
 
         // Ce oznacis kategorije jih doda k prejsnjim
         if($categories != null){
@@ -87,25 +85,24 @@ class PostController extends Controller
         $post->content = $content;
         $post->save();
 
-        return redirect('/');
+        return redirect(route('details', ['id' => $id]))->with('status', 'Objava: '. $post->title. ' je bila spremenjena');
     }
 
 
-
-    public function saveComment($postId){
+    public function saveComment( StoreCommenttRequest $request, $postId){
         // pridobi podatke iz baze za posmezen post
         $post = Post::find($postId);
 
         $comment = new Comment;
         $comment->post_id = $postId;
-        $comment->name = Request::get('name');
-        $comment->body = Request::get('body');
+        $comment->name = $request->get('name');
+        $comment->body = $request->get('body');
 
         // shranimo povezavo coment - post preko post_id
         $comment->post_id = $post->id;
         $comment->save();
 
-        return redirect('objava/'.$postId);
+        return redirect(route('details', ['id' => $postId]))->with('status', 'Komentar je bil usepšno shranjen');
     }
 
     // pregled vseh objav - tabela
@@ -124,10 +121,10 @@ class PostController extends Controller
     }
 
     // funkcija za dodajanje novih kategorij - na dashbordu
-    public function saveCategory(){
+    public function saveCategory(StoreCategoryRequest $request){
         $category = new Category;
 
-        $name = Request::get('category_name');
+        $name = $request->get('category_name');
         $category->name = $name;
         $category->save();
 

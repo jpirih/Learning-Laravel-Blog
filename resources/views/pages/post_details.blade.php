@@ -14,6 +14,12 @@
 
 @section('content')
     <div class="col-sm-6 col-sm-offset-3">
+        @if(session('status'))
+            <div class="alert alert-success">
+                <span class="glyphicon glyphicon-check"></span>
+                {{session('status')}}
+            </div>
+        @endif
         <div class="panel panel-primary">
             <div class="panel-body">
                 <h3> {{ $post->title }}</h3>
@@ -80,6 +86,15 @@
                 <h3>Napiši Komentar</h3>
                 <div class="row">
                     <div class="col-sm-12">
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form action="{{ route('save_comment', ['id' => $post->id]) }}" method="post" class="form-horizontal">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="form-group">

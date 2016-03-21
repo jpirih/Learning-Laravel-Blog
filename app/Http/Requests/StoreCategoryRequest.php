@@ -3,9 +3,8 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
-use Illuminate\Contracts\Validation\Validator;
 
-class StorePostRequest extends Request
+class StoreCategoryRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +24,7 @@ class StorePostRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required',
-            'content' => 'required',
+            'category_name' => 'required'
         ];
     }
-
 }
