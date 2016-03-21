@@ -19,7 +19,7 @@
         <ul>
             <li><a href="#tabs-1">Osnovni podatki</a></li>
             <li><a href="#tabs-2">O meni</a></li>
-            <li><a href=#tabs-3"">Delovne izkušnje</a></li>
+            <li><a href="#tabs-3">Delovne izkušnje</a></li>
             <li><a href="#tabs-4">Ostale aktivnosti</a></li>
         </ul>
         </div>
