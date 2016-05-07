@@ -82,16 +82,7 @@
             });
             // auto complete title
 
-                var words = [
-                    "test",
-                    "objava",
-                    "delovanje",
-                    "Upam",
-                    "petek",
-                    "sobota",
-                    "nedelja"];
-
-                $('#title').autocomplete({source: words});
+                
         </script>
     </div>
 @endsection

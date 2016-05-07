@@ -13,6 +13,7 @@ use Faker\Provider\zh_TW\DateTime;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
 {
@@ -22,6 +23,7 @@ class PostController extends Controller
         $categories = Category::all();
         return view('pages.new_post', ['categories' => $categories]);
     }
+    
 
     // funkcija saveNewPost shrani novo objavo v bazo podatkov
     public function saveNewPost(StorePostRequest $request ){
