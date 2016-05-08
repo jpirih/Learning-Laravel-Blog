@@ -23,6 +23,7 @@
             <a href="http://pohod.kekec-apps.com" class="list-group-item">Hobby PD</a>
             <a href="http://trgovina.kekec-apps.com" class="list-group-item">Hobby Market</a>
             <a href="http://invoice.kekec-apps.com" class="list-group-item">Invoice Manager</a>
+            <a href="http://janko-home-page.appspot.com/" class="list-group-item">Aplikacije Python</a>
         </div>
     </div>
     <!--  osrednji del seznam vseh objav veliki modri box-i-->
