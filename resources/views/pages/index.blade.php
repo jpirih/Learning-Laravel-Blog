@@ -17,17 +17,12 @@
 @section('content')
         <!-- levi stolpec opozorilo blog v izdelavi -->
     <div class="col-sm-3">
-       <h4>Prostor za uporabne informacije</h4>
-        <div class="alert alert-warning">
-            <p>
-                <span class="krepko">Blog v izdelavi: </span>
-                Pozdravljen/-a na mojem blogu, ki je še vedno v
-
-            </p>
-            <p>
-                Trenutno omogoča pisanje novih objav, pregled posamezne objave,
-                seznam zadnjih treh, in zbirni pregled vseh objav. Se nadaljuje ...
-            </p>
+       <h4>Aplikcaije</h4>
+        <div class="list-group">
+            <a href="/" class="list-group-item active">Blog</a>
+            <a href="http://pohod.kekec-apps.com" class="list-group-item">Hobby PD</a>
+            <a href="http://trgovina.kekec-apps.com" class="list-group-item">Hobby Market</a>
+            <a href="http://invoice.kekec-apps.com" class="list-group-item">Invoice Manager</a>
         </div>
     </div>
     <!--  osrednji del seznam vseh objav veliki modri box-i-->
