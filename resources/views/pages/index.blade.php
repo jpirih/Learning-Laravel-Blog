@@ -20,10 +20,10 @@
        <h4>Aplikcaije</h4>
         <div class="list-group">
             <a href="/" class="list-group-item active">Blog</a>
-            <a href="http://pohod.kekec-apps.com" class="list-group-item">Hobby PD</a>
-            <a href="http://trgovina.kekec-apps.com" class="list-group-item">Hobby Market</a>
-            <a href="http://invoice.kekec-apps.com" class="list-group-item">Invoice Manager</a>
-            <a href="http://janko-home-page.appspot.com/" class="list-group-item">Aplikacije Python</a>
+            <a href="http://pohod.kekec-apps.com" target="_blank" class="list-group-item">Hobby PD</a>
+            <a href="http://trgovina.kekec-apps.com" target="_blank" class="list-group-item">Hobby Market</a>
+            <a href="http://invoice.kekec-apps.com" target="_blank" class="list-group-item">Invoice Manager</a>
+            <a href="http://janko-home-page.appspot.com/" target="_blank" class="list-group-item">Aplikacije Python</a>
         </div>
     </div>
     <!--  osrednji del seznam vseh objav veliki modri box-i-->

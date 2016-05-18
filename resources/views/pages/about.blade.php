@@ -59,9 +59,18 @@
                                 <td class="krepko glava">Rojen</td>
                                 <td>20.8.1988</td>
                             </tr>
+                            <tr>
+                                <td class="krepko glava">Linki</td>
+                                <td>
+                                    <a href="https://github.com/jpirih" target="_blank">Github</a> <br>
+                                    <a href="https://www.linkedin.com/in/janko-pirih-295bab14" target="_blank">LinkedIn</a> <br>
+                                    <a href="https://www.facebook.com/janko.pirih" target="_blank">Facebook</a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                 </div>
+
                 <div id="tabs-2">
                     <!-- O meni -->
                     <h3>O Meni</h3>
