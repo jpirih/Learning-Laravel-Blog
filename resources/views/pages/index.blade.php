@@ -17,12 +17,19 @@
 @section('content')
         <!-- levi stolpec opozorilo blog v izdelavi -->
     <div class="col-sm-3">
-       <h4>Aplikcaije</h4>
+       <h4>Aplikcaije Php Laravel</h4>
         <div class="list-group">
             <a href="/" class="list-group-item active">Blog</a>
             <a href="http://pohod.kekec-apps.com" target="_blank" class="list-group-item">Hobby PD</a>
             <a href="http://trgovina.kekec-apps.com" target="_blank" class="list-group-item">Hobby Market</a>
             <a href="http://invoice.kekec-apps.com" target="_blank" class="list-group-item">Invoice Manager</a>
+        </div>
+        <h4>Aplikacije Php Codeigniter</h4>
+        <div class="list-group">
+            <a href="http://product-details.kekec-apps.com/" target="_blank" class="list-group-item">Slovenska košarica</a>
+        </div>
+        <h4>Aplikacije Python</h4>
+        <div class="list-group">
             <a href="http://janko-home-page.appspot.com/" target="_blank" class="list-group-item">Aplikacije Python</a>
         </div>
     </div>
