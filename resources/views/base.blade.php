@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="{{ public_path('/css/theme.css') }}" type="text/css">
 
 
     <title>Blog - @yield('title')</title>
