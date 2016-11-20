@@ -26,6 +26,7 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['uses' => 'SiteController@index']);
+    Route::get('/blog', ['uses' => 'PostController@posts', 'as' => 'blog']);
     Route::get('o-meni', ['uses' => 'SiteController@about']);
     Route::get('kontakt',['uses' => 'SiteController@contact']);
     Route::get('nova-objava', ['uses' => 'PostController@writeNewPost', 'as' => 'new_post']);

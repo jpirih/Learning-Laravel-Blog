@@ -19,7 +19,7 @@
         <ul>
             <li><a href="#tabs-1">Osnovni podatki</a></li>
             <li><a href="#tabs-2">O meni</a></li>
-            <li><a href="#tabs-3">Delovne izkušnje</a></li>
+            <li><a href="#tabs-3">Programiranje</a></li>
             <li><a href="#tabs-4">Ostale aktivnosti</a></li>
         </ul>
         </div>
@@ -28,7 +28,7 @@
                 <div id="tabs-1">
                     <h2 class="sredinsko">Janko Pirih</h2>
                     <div class="sredinsko">
-                        <img src="https://scontent-vie1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/602661_4159091249390_596006088_n.jpg?oh=166d03b5d65b7bd35e24aafa8edbb6e5&oe=5764EC2C" alt="mojaSlika"/></a>
+                        <img src="http://i.imgur.com/H8bWfnK.jpg" alt="mojaSlika"/></a>
                     </div>
                     <br>
                     <!-- TAbela osnovni podatki -->
@@ -90,40 +90,70 @@
                     </p>
                 </div>
                 <div id="tabs-3">
-                    <h3>Delovne izkušnje</h3>
+                    <h3>Programiranje</h3>
+                    
+                    <p>
+                        Zgodba o mojem programiranju se je začela bolj resno nekje v letu 2014. Ko sem se 
+                        učenja programiranja najprej lotil sam s pomočjo raznih tutorialov na spletu. 
+                        Potem pa sem jeseni leta 2015 odkril tečaje, ki jih organizira 
+                        <span class="krepko"><a href="https://www.smartninja.org/" target="_blank">SmartNinja</a></span>
+                        Takrat je učenje postalo veliko bolj zabavno in učinkovito (hitrejše).
+                    </p>
+                    <p>
+                        Pri smart naslednje tečaje:
+                        <ul>
+                            <li>Vikend Programiranja (HTML, CSS, Bootstrap)</li>
+                            <li>Web development 1 (HTML, CSS, Bootstrap, Python, Google App Engine)</li>
+                            <li>Web development 2 (HTML, CSS, Bootstrap, MySQL, PHP, Laravel, Javascript)</li>
+                            <li>Android development(Java Android, XML)</li>
+                            <li>AngularJS</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Poleg znanja, ki sem ga pridobil na tečajih še vedno rad raziskujem tudi sam in se vedno učim
+                        česa novega.  Kar nekaj od tega je tudi na mojem <span class="krepko"><a href="https://github.com/jpirih">Github-u</a></span>
+                        Pa tudi tam ni čisto vsega.
+                    </p>
+
+                    <p>
+                        Za enkrat še nisem delal na nobenem večjem projektu. Bom pa zelo vesel, če me bo kontaktiral,
+                        kdo, ki misli, da bi mu lahko s svojim znanjem in delovno zagnanostjo pomagal.
+                    </p>
+
+                </div>
+                <div id="tabs-4">
+                    <h3>Delovne izkušnje in ostale aktivnosti</h3>
+                    <p>
+                        Na tem mestu bi rad napisal še nekaj stvari, ki še niso omenjene v prejšnjih zavihkih.
+                    </p>
+
+                    <h4>Delovne izkušnje</h4>
                     <ol>
                         <li>Eta Cerkno</li>
                         <li>EF UL demonstrator</li>
                         <li>Termopol Sovoedenj</li>
+                        <li>Stotnkar d.o.o.</li>
                     </ol>
-                </div>
-                <div id="tabs-4">
-                    <h3>Ostale aktivnosti</h3>
-                    <p>
-                        Torej na tem mestu še neakj ostalih stvari, ki niso naštete v ostalih
-                        zavihkih
-                    </p>
 
                     <h4>Domače aktivnosti</h4>
-                    <ul>
-                        <li>Pomoč pri  zunannjih opravili odvisno do dela  - trenutno lubadar (sept/okt 2015)</li>
-                        <li>Razna gosopodinjska opravila - podporne aktivnosti</li>
-                        <li>Delo v hlevu - (glejštajne)</li>
-                        <li>Predelava mleka izdelava mlečnih izdelkov (poltrdi sir, skuta, jogurt, mladi sir)</li>
-                        <li>Razno ostalo</li>
-                    </ul>
+                    <p>
+                        Zgoraj sem na hitro naštel moje delovne iskušnje  naštete so samo tiste, za katere
+                        sem bil dosedaj plačan :).  Drugače pa ja  rad delam veliko različnih stvari v življenju.
+                        skratka zelo težko sem primiru.
+                    </p>
+                    <p>
+                        Kljub temu, da me delo z račualniki in programiranje zelo veseli, nisem človek, ki bi lahko
+                        10 ur na dan sedel za računalnikom.  Doma imamo kmetijo, tako, da kar nekaj časa, ko sem doma
+                        vzame tudi to delo.  Tukaj še ena za vse tiste, ki mislite, da je delo na kemtiji sezonsko
+                        <span class="krepko">ni res</span> delo je seveda  različno tudi do letnega časa pa še od monogo
+                        drugega, ga je pa vedno ogoromno. Pa še ena za vse  tiste, ki mislite, da je življenje na ketih
+                        romantično tudi to <span class="krepko">ni res</span>. Seveda je veliko lepih trenutkov, posebno
+                        če si jih zanmo ustvariti sami. Ni pa kakšne filemske romantike.
+                    </p>
+                    <p>
+                        Poleg tega, pa se z veseljem lotim kašnega prostovalnega dela, se pač sproti pokaže. :)
+                    </p>
 
-                    <h4>Izobraževanje</h4>
-                    <ul>
-                        <li> Predelava mleka - BC Naklo</li>
-                        <li>Računalniištvo(programiranje, operacijski sistemi, baze podatkov...)</li>
-                    </ul>
-
-                    <h4>Dodatno</h4>
-                    <ul>
-                        <li>Prostovoljno delo - mladinske skupine</li>
-                        <li>Sosedska pomoč - Žernade</li>
-                    </ul>
 
                 </div>
 

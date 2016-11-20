@@ -17,6 +17,32 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
 {
+    // blog main page
+    public function posts()
+    {
+        Carbon::setLocale('sl');
+        $danes = Carbon::today();
+
+        // posts from  database
+        $posts = Post::where('date_published', '<=', $danes)->orderBy('created_at', 'desc')->paginate(3);
+
+        foreach ($posts as $post)
+            if(gettype($post->date_published) == "string")
+            {
+                $post->date_published = strtotime($post->date_published);
+                $post->date_published = date('d.M.Y', $post->date_published);
+            }
+            else
+            {
+                $post->date_published = date('d.M.Y', $post->date_published);
+            }
+
+        $newPosts = Post::orderBy('created_at', 'desc')->take(3)->get();
+
+
+        return view('pages.posts', ['posts' => $posts, 'newPosts' => $newPosts]);
+    }
+
     // obrazec za vnos objav
     // zraven posljem podatke o kategorijah, ki jih lahko zbiras
     public function writeNewPost(){

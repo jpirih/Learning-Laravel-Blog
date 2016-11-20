@@ -5,30 +5,18 @@
 @endsection
         <!-- glavni naslov strani -->
 @section('page-heading')
-    Moje pisarije - pregeld vseh
+    Kekec-apps.com Domača stran / Home Page
 @endsection
 
         <!-- opis pod naslovom -->
 @section('description')
-    Zdravo znašel si se na mojem blogu na njem bom pisal samo lepe stvari,
-    vse kar se mi bo pozitivnega zgodilo :)
+    Ena ne ravno čisto običajna spletna stran :)
 @endsection
 
 @section('content')
-        <!-- levi stolpec opozorilo blog v izdelavi -->
-    <div class="col-sm-3">
-       <h4>Aplikcaije Php Laravel </h4>
-        <div class="list-group">
-            <a href="/" class="list-group-item active">Blog</a>
-            <a href="http://pohod.kekec-apps.com" target="_blank" class="list-group-item">Hobby PD</a>
-            <a href="http://trgovina.kekec-apps.com" target="_blank" class="list-group-item">Hobby Market</a>
-            <a href="http://invoice.kekec-apps.com" target="_blank" class="list-group-item">Invoice Manager</a>
-            <a href="http://product-details.kekec-apps.com/" target="_blank" class="list-group-item">Tools</a>
-            <a href="http://janko-home-page.appspot.com/" target="_blank" class="list-group-item">Aplikacije Python WebApp2</a>
-        </div>
-    </div>
+
     <!--  osrednji del seznam vseh objav veliki modri box-i-->
-    <div class="col-sm-6">
+    <div class="col-sm-9">
         @if(session('status'))
                 <div class="alert alert-success">
                     <span class="glyphicon glyphicon-check"></span>
@@ -36,51 +24,48 @@
                 </div>
         @endif
         <!-- za prikazovanje skrbi SiteController -> funkcija index() -->
-        <div class="panel panel-primary">
-            <div class="panel-body">
-                @if(count($posts)== 0)
-                    <div class="well">
-                        <h2> Ni objav </h2>
-                        <p>
-                            Pred dodajanjem nove objave poglje Dashboard
-                            če so dodane kategorije. Če jih želiiš jih tam lahko dodaš
-                            Za pisanje prve objave  pa klikni gumb nova objavi
-                        </p>
-                    </div>
-                @else
-                    @foreach($posts as $post)
-                        <div class="well">
-                            <h2> {{ $post->title }} </h2>
-                            <p>
-                                {{ $post->content }}
-                            </p>
-                            <p>
-                                <sapn class="krepko">Datum objave: </sapn> {{ $post->date_published }}
-                            </p>
-                            <p>
-                                <a href="{{ route('details', ['id' => $post->id]) }}" class="btn-primary btn">
-                                    Podrobnosti ...
-                                </a>
-                            </p>
-                        </div>
-                    @endforeach
-                            <!-- linki za paginacijo postov -->
-                    {!! $posts->links() !!}
-                @endif
+            <div>
+                <img src="http://i.imgur.com/X0qP02C.jpg?2" alt="porezen" class="img img-rounded img-responsive index-img">
             </div>
+            <br>
+        <div class="info-box">
+            <h2>Dobrodošli</h2>
+            <p>
+                Dobrodošli na spletni strani kekec-apps.com. To spletno stran sem postavil s prva z namenom, da
+                bi lahko zainteresiranim pokazal nekaj spletnih (strani/aplikacij), ki sem jih izdelal. S programiranjem
+                se ukvarjam ljubiteljsko. Rad pa bi nekoč (čimprej) tudi delal kot programer. Pa so mi svetovali,
+                da je lažje če imaš nekje zbrane aplikacije, da se jih da videt kako delujejo.
+            </p>
+            <p>
+                Poleg tega pa ta strežnik uporabljam tudi za poganjanje aplikacij, ki jih uporabljam za osebno rabo
+                in niso javno dostopne.
+            </p>
+            <div class="well">
+                <h4>Opomba</h4>
+                <p>
+                    Vsi podatki znotraj aplikacij so zgolj "dummy data" namenjeni samo za to, da vidite kako stvari
+                    delujejo.
+                </p>
+            </div>
+            <p>
+                <a href="{{ route('blog')}}" class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    Vstop
+                </a>
+            </p>
         </div>
 
     </div>
     <!-- desni meni Gumb za nove objave -->
     <div class="col-sm-3">
         <div>
-            <a href="{{ route('new_post') }}" class="btn btn-block btn-success"><span class="glyphicon glyphicon-plus"></span>
-                Nova objava
+            <a href="{{ route('blog') }}" class="btn btn-block btn-success"><span class="glyphicon glyphicon-align-justify"></span>
+                Blog
             </a>
         </div>
         <hr>
         <!-- tabela najnovejši trije za prikazovanje skrbi SiteController ->index funkcija -->
-        <h4>Najnovejše tri</h4>
+        <h4>Najnovejše na Blogu </h4>
         <table class="table table-responsive table-bordered">
             <tr class="glava">
                 <th>Naslov</th>
@@ -95,9 +80,8 @@
 
         </table>
         <!-- link na tabelo vseh objav  -->
-        <a href="/zbirnik-objav" class="btn btn-primary btn-block">
-            <span class="glyphicon glyphicon-th-list"></span>
-            Dashboard
+        <a href="{{ route('blog') }}" class="btn btn-block btn-success"><span class="glyphicon glyphicon-align-justify"></span>
+            Blog
         </a>
     </div>
 @endsection

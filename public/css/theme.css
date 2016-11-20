@@ -1,3 +1,8 @@
+.index-img{
+    width: 100%;
+    height: 240px;
+}
+
 .krepko{
     font-weight: bold;
 }
@@ -13,4 +18,10 @@
     background-color: #337ab7;
     font-weight: bold;
     color: white;
+}
+.info-box{
+    background: lightcyan;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
 }

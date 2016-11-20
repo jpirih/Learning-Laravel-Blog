@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="css/theme.css">
 
 
     <title>Blog - @yield('title')</title>
@@ -29,7 +29,7 @@
                 <span class=" glyphicon glyphicon-menu-hamburger"></span>
             </button>
 
-            <a href="/" class="navbar-brand">Kekec Blog</a>
+            <a href="/" class="navbar-brand">kekec-apps.com</a>
         </div>
 
         <div class="collapse navbar-collapse" id="nav_zg" >

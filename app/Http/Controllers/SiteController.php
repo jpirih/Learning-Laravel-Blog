@@ -16,18 +16,7 @@ class SiteController extends Controller
     public function index(){
         Carbon::setLocale('sl');
         $danes = Carbon::today();
-        $posts = DB::table('posts')->where('date_published', '<=', $danes)
-            ->orderBy('created_at', 'desc')->paginate(3);
-        foreach ($posts as $post)
-            if(gettype($post->date_published) == "string")
-            {
-                $post->date_published = strtotime($post->date_published);
-                $post->date_published = date('d.M.Y', $post->date_published);
-            }
-            else
-            {
-                $post->date_published = date('d.M.Y', $post->date_published);
-            }
+
 
         $newPosts = DB::table('posts')->orderBy('created_at', 'desc')->take(3)->get();
         foreach ($newPosts as $item)
@@ -37,7 +26,7 @@ class SiteController extends Controller
             
         }
 
-        return view('pages.index', ['posts' => $posts, 'newPosts' => $newPosts]);
+        return view('pages.index', ['newPosts' => $newPosts]);
     }
 
     public function about(){
