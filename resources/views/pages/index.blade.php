@@ -25,7 +25,7 @@
         @endif
         <!-- za prikazovanje skrbi SiteController -> funkcija index() -->
             <div>
-                <img src="http://i.imgur.com/X0qP02C.jpg?2" alt="porezen" class="img img-rounded img-responsive index-img">
+                <img src="http://i.imgur.com/X0qP02C.jpg?2" alt="porezen" class="img img-rounded img-responsive index-imgq">
             </div>
             <br>
         <div class="info-box">
