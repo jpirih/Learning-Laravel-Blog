@@ -28,7 +28,7 @@
                 <img src="http://i.imgur.com/X0qP02C.jpg?2" alt="porezen" class="img img-rounded img-responsive index-img" height="240px">
             </div>
             <br>
-        <div class="bg-info">
+        <div class="info-box">
             <h2>Dobrodošli</h2>
             <p>
                 Dobrodošli na spletni strani kekec-apps.com. To spletno stran sem postavil s prva z namenom, da
