@@ -27,7 +27,7 @@ class PostController extends Controller
 
     public function posts()
     {
-        $user = Socialite::driver('google')->user();
+
         Carbon::setLocale('sl');
         $danes = Carbon::today();
 

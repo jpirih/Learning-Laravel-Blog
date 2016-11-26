@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e8aed87-16e3-47fa-a71d-df7182c4525a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,12 +27,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="340">
+              <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <folding>
+                <element signature="e#40#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,9 +97,9 @@
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/resources/views/base.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/posts.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
       </list>
     </option>
   </component>
@@ -458,7 +460,7 @@
       <workItem from="1479824766529" duration="1004000" />
       <workItem from="1480143790609" duration="841000" />
       <workItem from="1480165069915" duration="2964000" />
-      <workItem from="1480169594731" duration="7580000" />
+      <workItem from="1480169594731" duration="7644000" />
     </task>
     <task id="LOCAL-00001" summary="Links updated">
       <created>1479322088446</created>
@@ -593,11 +595,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480177078560</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="google login test">
+      <created>1480177191935</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1480177191935</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119344000" />
+    <option name="totallyTimeSpent" value="119408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1197,39 +1206,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1480176557733" expanded="true" signature="44:473" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="514:5615" ph="{...}" />
-            <marker date="1480176557733" expanded="true" signature="547:588" ph=" PostController constructor. ..." />
-            <marker date="1480176557733" expanded="true" signature="620:1463" ph="{...}" />
-            <marker date="1480176557733" expanded="true" signature="979:1159" ph="{...}" />
-            <marker date="1480176557733" expanded="true" signature="1176:1282" ph="{...}" />
-            <marker date="1480176557733" expanded="true" signature="1594:1708" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="1839:2962" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="2586:2856" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="2642:2846" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="3038:3279" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="3315:3480" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="3580:4276" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="3838:4033" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="3894:4023" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="4353:4851" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="4920:5291" ph="..." />
-            <marker date="1480176557733" expanded="true" signature="5018:5150" ph="{...}" />
-            <marker date="1480176557733" expanded="true" signature="5418:5612" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1480177186828" expanded="false" signature="9:383" ph="..." />
+            <marker date="1480177186828" expanded="true" signature="391:768" ph="..." />
+            <marker date="1480177186828" expanded="true" signature="785:1876" ph="..." />
+            <marker date="1480177186828" expanded="true" signature="825:1875" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
