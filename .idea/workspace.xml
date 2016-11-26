@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e8aed87-16e3-47fa-a71d-df7182c4525a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/posts.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/posts.blade.php" />
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,14 +27,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
+      <file leaf-file-name="posts.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/posts.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="50" column="78" lean-forward="false" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
-              <folding>
-                <element signature="e#40#57#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="578">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,9 +95,9 @@
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/resources/views/base.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/posts.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/posts.blade.php" />
       </list>
     </option>
   </component>
@@ -322,7 +320,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;pos&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;rou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;routes&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Providers/RouteServiceProvider.php&#10;au&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/Auth/AuthController.php&#10;ba&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;rout&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;create_us&#9;FILE&#9;file://D:/Code/KekecApps/Blog/database/migrations/2014_10_12_000000_create_users_table.php&#10;th&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;abou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/about.blade.php&#10;Sit&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/SiteController.php&#10;the&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;bas&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;about&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/about.blade.php&#10;si&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/SiteController.php&#10;Po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;inde&#9;FILE&#9;file://D:/Code/Blog/resources/views/pages/index.blade.php&#10;ne&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/new_post.blade.php&#10;new&#9;null&#9;null&#10;git&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/.gitignore&#10;post_de&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/post_details.blade.php&#10;das&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/posts_dashboard.blade.php&#10;in&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/index.blade.php&#10;post&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/post_details.blade.php&#10;PostCo&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/app/Http/Controllers/PostController.php&#10;new_po&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/resources/views/pages/new_post.blade.php&#10;co&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/Controllers/CommentController.php&#10;route&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/routes.php&#10;Post&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Post.php&#10;ro&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/routes.php" />
+    <property name="SearchEverywhereHistoryKey" value="po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;pos&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;rou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;routes&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Providers/RouteServiceProvider.php&#10;au&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/Auth/AuthController.php&#10;ba&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;rout&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;create_us&#9;FILE&#9;file://D:/Code/KekecApps/Blog/database/migrations/2014_10_12_000000_create_users_table.php&#10;th&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;abou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/about.blade.php&#10;Sit&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/SiteController.php&#10;the&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;bas&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;about&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/about.blade.php&#10;si&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/SiteController.php&#10;Po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;inde&#9;FILE&#9;file://D:/Code/Blog/resources/views/pages/index.blade.php&#10;ne&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/new_post.blade.php&#10;new&#9;null&#9;null&#10;git&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/.gitignore&#10;post_de&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/post_details.blade.php&#10;das&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/posts_dashboard.blade.php&#10;in&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/index.blade.php&#10;post&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/post_details.blade.php&#10;PostCo&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/app/Http/Controllers/PostController.php&#10;new_po&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/resources/views/pages/new_post.blade.php&#10;co&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/Controllers/CommentController.php&#10;route&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/routes.php&#10;Post&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Post.php&#10;ro&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/routes.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -460,7 +458,7 @@
       <workItem from="1479824766529" duration="1004000" />
       <workItem from="1480143790609" duration="841000" />
       <workItem from="1480165069915" duration="2964000" />
-      <workItem from="1480169594731" duration="7672000" />
+      <workItem from="1480169594731" duration="7740000" />
     </task>
     <task id="LOCAL-00001" summary="Links updated">
       <created>1479322088446</created>
@@ -609,11 +607,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480177256219</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="google login test">
+      <created>1480177285260</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1480177285260</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119436000" />
+    <option name="totallyTimeSpent" value="119504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1175,44 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/posts.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-          <folding>
-            <marker date="1480176655537" expanded="true" signature="35:60" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="64:98" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="126:160" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="164:196" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="223:415" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="419:496" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="525:1362" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="599:1351" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="1453:3311" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="1491:1560" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="1637:1758" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="1768:1837" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="1881:3299" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="1918:3284" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="1996:2363" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="2068:2336" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="2474:3114" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="2564:2650" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="2682:2818" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="2850:3083" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="2961:3050" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="3140:3196" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="3382:4428" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="3396:3583" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="3477:3568" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="3785:4208" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="3816:3900" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="3962:4166" ph="..." />
-            <marker date="1480176655537" expanded="true" signature="4320:4417" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1228,11 +1195,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" column="78" lean-forward="false" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
+        <state relative-caret-position="425">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
+            <marker date="1480177277045" expanded="true" signature="44:473" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="514:5546" ph="{...}" />
+            <marker date="1480177277045" expanded="true" signature="547:588" ph=" PostController constructor. ..." />
+            <marker date="1480177277045" expanded="true" signature="620:1394" ph="{...}" />
+            <marker date="1480177277045" expanded="true" signature="927:1107" ph="{...}" />
+            <marker date="1480177277045" expanded="true" signature="1124:1230" ph="{...}" />
+            <marker date="1480177277045" expanded="true" signature="1525:1639" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="1770:2893" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="2517:2787" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="2573:2777" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="2969:3210" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="3246:3411" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="3511:4207" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="3769:3964" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="3825:3954" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="4284:4782" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="4851:5222" ph="..." />
+            <marker date="1480177277045" expanded="true" signature="4949:5081" ph="{...}" />
+            <marker date="1480177277045" expanded="true" signature="5349:5543" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/posts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
