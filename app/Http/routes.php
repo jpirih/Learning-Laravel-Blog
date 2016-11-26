@@ -37,6 +37,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('objava/{id}/comment', ['uses' => 'PostController@saveComment', 'as' => 'save_comment']);
     Route::get('objava/{id}/update', ['uses' => 'PostController@editPost', 'as' => 'edit_post']);
     Route::post('objava/{id}/update', ['uses' => 'PostController@updatePost', 'as' => 'update_post']);
-    Route::get('login', ['uses' => 'AuthController@redirectToProvider']);
+    Route::get('login', ['uses' => 'Auth\AuthController@redirectToProvider']);
 
 });
