@@ -26,6 +26,7 @@
             <a href="http://invoice.kekec-apps.com" target="_blank" class="list-group-item">Invoice Manager</a>
             <a href="http://product-details.kekec-apps.com/" target="_blank" class="list-group-item">Tools</a>
             <a href="http://janko-home-page.appspot.com/" target="_blank" class="list-group-item">Aplikacije Python WebApp2</a>
+            <a href="http://eshop.kekec-apps.com/" target="_blank" class="list-group-item">Angular Eshop</a>
         </div>
     </div>
 
