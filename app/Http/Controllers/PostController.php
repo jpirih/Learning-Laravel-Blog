@@ -48,7 +48,7 @@ class PostController extends Controller
         $newPosts = Post::orderBy('created_at', 'desc')->take(3)->get();
 
 
-        return view('pages.posts', ['posts' => $posts, 'newPosts' => $newPosts, 'user' => $user]);
+        return view('pages.posts', ['posts' => $posts, 'newPosts' => $newPosts]);
     }
 
     // obrazec za vnos objav
