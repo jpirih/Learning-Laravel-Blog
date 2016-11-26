@@ -37,6 +37,7 @@
                 <li><a href="/">Domov</a></li>
                 <li><a href="/o-meni">O meni</a></li>
                 <li><a href="/kontakt">Kontakt - Lokacija </a></li>
+
             </ul>
         </div>
     </div>

@@ -13,13 +13,21 @@ use Faker\Provider\zh_TW\DateTime;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
+use Laravel\Socialite\Facades\Socialite;
 use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
 {
+
     // blog main page
+    /**
+     * PostController constructor.
+     */
+
+
     public function posts()
     {
+        $user = Socialite::driver('google')->user();
         Carbon::setLocale('sl');
         $danes = Carbon::today();
 
@@ -40,7 +48,7 @@ class PostController extends Controller
         $newPosts = Post::orderBy('created_at', 'desc')->take(3)->get();
 
 
-        return view('pages.posts', ['posts' => $posts, 'newPosts' => $newPosts]);
+        return view('pages.posts', ['posts' => $posts, 'newPosts' => $newPosts, 'user' => $user]);
     }
 
     // obrazec za vnos objav

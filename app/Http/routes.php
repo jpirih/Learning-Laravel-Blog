@@ -26,10 +26,10 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['uses' => 'SiteController@index']);
-    Route::get('/blog', ['uses' => 'PostController@posts', 'as' => 'blog']);
+    Route::get('/blog', ['middleware'=> 'auth','uses' => 'PostController@posts', 'as' => 'blog']);
     Route::get('o-meni', ['uses' => 'SiteController@about']);
     Route::get('kontakt',['uses' => 'SiteController@contact']);
-    Route::get('nova-objava', ['uses' => 'PostController@writeNewPost', 'as' => 'new_post']);
+    Route::get('nova-objava', ['middleware' => 'auth', 'uses' => 'PostController@writeNewPost', 'as' => 'new_post']);
     Route::post('nova-objava', ['uses' => 'PostController@saveNewPost']);
     Route::get('objava/{id}', ['uses' => 'PostController@postDetails', 'as' => 'details']);
     Route::get('zbirnik-objav', ['uses' => 'PostController@allPosts', 'as' => 'dashboard']);
@@ -37,4 +37,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('objava/{id}/comment', ['uses' => 'PostController@saveComment', 'as' => 'save_comment']);
     Route::get('objava/{id}/update', ['uses' => 'PostController@editPost', 'as' => 'edit_post']);
     Route::post('objava/{id}/update', ['uses' => 'PostController@updatePost', 'as' => 'update_post']);
+    Route::get('/login', 'Auth\AuthController@redirectToProvider');
+    Route::get('auth/google/callback', 'Auth\AuthController@handleProviderCallback');
 });

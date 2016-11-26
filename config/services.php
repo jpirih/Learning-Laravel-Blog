@@ -34,5 +34,10 @@ return [
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'google' => [
+        'client_id' => '970990086648-kifnrtf8h1gars878cupj9ihov2dq9qi.apps.googleusercontent.com',
+        'client_secret' => 'fxi3WIHMO7gPgpCOt1yK-mii',
+        'redirect' => 'http://kekec-apps.com/blog',
+    ],
 
 ];

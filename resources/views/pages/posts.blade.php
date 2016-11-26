@@ -32,6 +32,9 @@
 
     <!--  osrednji del seznam vseh objav veliki modri box-i-->
     <div class="col-sm-6">
+        <div class="well pull-right">
+            Prijavljeni si kot {{ $user->getName() }}
+        </div>
         @if(session('status'))
             <div class="alert alert-success">
                 <span class="glyphicon glyphicon-check"></span>
