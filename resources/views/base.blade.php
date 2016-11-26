@@ -23,7 +23,7 @@
 </head>
 <body>
 <div class="navbar navbar-inverse">
-    <div class="container-fluid">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_zg">
                 <span class=" glyphicon glyphicon-menu-hamburger"></span>
