@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e8aed87-16e3-47fa-a71d-df7182c4525a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/posts.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/posts.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="posts.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/posts.blade.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="39" column="69" lean-forward="false" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -95,9 +95,9 @@
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/resources/views/base.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/posts.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -320,7 +320,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;pos&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;rou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;routes&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Providers/RouteServiceProvider.php&#10;au&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/Auth/AuthController.php&#10;ba&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;rout&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;create_us&#9;FILE&#9;file://D:/Code/KekecApps/Blog/database/migrations/2014_10_12_000000_create_users_table.php&#10;th&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;abou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/about.blade.php&#10;Sit&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/SiteController.php&#10;the&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;bas&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;about&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/about.blade.php&#10;si&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/SiteController.php&#10;Po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;inde&#9;FILE&#9;file://D:/Code/Blog/resources/views/pages/index.blade.php&#10;ne&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/new_post.blade.php&#10;new&#9;null&#9;null&#10;git&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/.gitignore&#10;post_de&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/post_details.blade.php&#10;das&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/posts_dashboard.blade.php&#10;in&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/index.blade.php&#10;post&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/post_details.blade.php&#10;PostCo&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/app/Http/Controllers/PostController.php&#10;new_po&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/resources/views/pages/new_post.blade.php&#10;co&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/Controllers/CommentController.php&#10;route&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/routes.php&#10;Post&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Post.php&#10;ro&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/routes.php" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;pos&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;rou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;routes&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Providers/RouteServiceProvider.php&#10;au&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/Auth/AuthController.php&#10;ba&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;rout&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;create_us&#9;FILE&#9;file://D:/Code/KekecApps/Blog/database/migrations/2014_10_12_000000_create_users_table.php&#10;th&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;abou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/about.blade.php&#10;Sit&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/SiteController.php&#10;the&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;bas&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;about&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/about.blade.php&#10;si&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/SiteController.php&#10;Po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;inde&#9;FILE&#9;file://D:/Code/Blog/resources/views/pages/index.blade.php&#10;ne&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/new_post.blade.php&#10;new&#9;null&#9;null&#10;git&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/.gitignore&#10;post_de&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/post_details.blade.php&#10;das&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/posts_dashboard.blade.php&#10;in&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/index.blade.php&#10;post&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/resources/views/pages/post_details.blade.php&#10;PostCo&#9;FILE&#9;file://E:/Learning/Php/Laravel/Blog/app/Http/Controllers/PostController.php&#10;new_po&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/resources/views/pages/new_post.blade.php&#10;co&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/Controllers/CommentController.php&#10;route&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/routes.php&#10;Post&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Post.php&#10;ro&#9;FILE&#9;file://C:/Users/JankoHP/Code/Blog/app/Http/routes.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -458,7 +458,7 @@
       <workItem from="1479824766529" duration="1004000" />
       <workItem from="1480143790609" duration="841000" />
       <workItem from="1480165069915" duration="2964000" />
-      <workItem from="1480169594731" duration="7740000" />
+      <workItem from="1480169594731" duration="8436000" />
     </task>
     <task id="LOCAL-00001" summary="Links updated">
       <created>1479322088446</created>
@@ -614,11 +614,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480177285260</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="google login test">
+      <created>1480177356864</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1480177356864</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119504000" />
+    <option name="totallyTimeSpent" value="120200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1155,47 +1162,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/posts.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="391">
+          <caret line="23" column="102" lean-forward="true" selection-start-line="23" selection-start-column="102" selection-end-line="23" selection-end-column="102" />
           <folding>
-            <marker date="1480176557675" expanded="true" signature="49:262" ph="..." />
-            <marker date="1480176557675" expanded="true" signature="303:2189" ph="{...}" />
-            <marker date="1480176557675" expanded="true" signature="312:747" ph="..." />
-            <marker date="1480176557675" expanded="true" signature="791:860" ph="{...}" />
-            <marker date="1480176557675" expanded="true" signature="906:972" ph="{...}" />
-            <marker date="1480176557675" expanded="true" signature="1039:1130" ph=" Where to redirect users after login / registration. ..." />
-            <marker date="1480176557675" expanded="true" signature="1174:1263" ph=" Create a new authentication controller instance. ..." />
-            <marker date="1480176557675" expanded="true" signature="1299:1388" ph="{...}" />
-            <marker date="1480176557675" expanded="true" signature="1397:1557" ph=" Get a validator for an incoming registration request. ..." />
-            <marker date="1480176557675" expanded="true" signature="1605:1827" ph="{...}" />
-            <marker date="1480176557675" expanded="true" signature="1643:1819" ph="..." />
-            <marker date="1480176557675" expanded="true" signature="1651:1818" ph="..." />
-            <marker date="1480176557675" expanded="true" signature="1836:1959" ph=" Create a new user instance after a valid registration. ..." />
-            <marker date="1480176557675" expanded="true" signature="2004:2187" ph="{...}" />
-            <marker date="1480176557675" expanded="true" signature="2039:2179" ph="..." />
-            <marker date="1480176557675" expanded="true" signature="2040:2178" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <marker date="1480177186828" expanded="false" signature="9:383" ph="..." />
-            <marker date="1480177186828" expanded="true" signature="391:768" ph="..." />
-            <marker date="1480177186828" expanded="true" signature="785:1876" ph="..." />
-            <marker date="1480177186828" expanded="true" signature="825:1875" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="35:60" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="64:98" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="126:160" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="164:196" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="223:415" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="419:496" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="525:1362" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="599:1351" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="1453:3205" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="1531:1652" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="1662:1731" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="1775:3193" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="1812:3178" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="1890:2257" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="1962:2230" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="2368:3008" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="2458:2544" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="2576:2712" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="2744:2977" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="2855:2944" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="3034:3090" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="3276:4322" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="3290:3477" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="3371:3462" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="3679:4102" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="3710:3794" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="3856:4060" ph="..." />
+            <marker date="1480177338124" expanded="true" signature="4214:4311" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="-34">
           <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding>
             <marker date="1480177277045" expanded="true" signature="44:473" ph="..." />
@@ -1221,10 +1227,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/posts.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="38" />
+          <folding>
+            <marker date="1480176557675" expanded="true" signature="49:262" ph="..." />
+            <marker date="1480176557675" expanded="true" signature="303:2189" ph="{...}" />
+            <marker date="1480176557675" expanded="true" signature="312:747" ph="..." />
+            <marker date="1480176557675" expanded="true" signature="791:860" ph="{...}" />
+            <marker date="1480176557675" expanded="true" signature="906:972" ph="{...}" />
+            <marker date="1480176557675" expanded="true" signature="1039:1130" ph=" Where to redirect users after login / registration. ..." />
+            <marker date="1480176557675" expanded="true" signature="1174:1263" ph=" Create a new authentication controller instance. ..." />
+            <marker date="1480176557675" expanded="true" signature="1299:1388" ph="{...}" />
+            <marker date="1480176557675" expanded="true" signature="1397:1557" ph=" Get a validator for an incoming registration request. ..." />
+            <marker date="1480176557675" expanded="true" signature="1605:1827" ph="{...}" />
+            <marker date="1480176557675" expanded="true" signature="1643:1819" ph="..." />
+            <marker date="1480176557675" expanded="true" signature="1651:1818" ph="..." />
+            <marker date="1480176557675" expanded="true" signature="1836:1959" ph=" Create a new user instance after a valid registration. ..." />
+            <marker date="1480176557675" expanded="true" signature="2004:2187" ph="{...}" />
+            <marker date="1480176557675" expanded="true" signature="2039:2179" ph="..." />
+            <marker date="1480176557675" expanded="true" signature="2040:2178" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="69" lean-forward="false" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
           <folding />
         </state>
       </provider>
