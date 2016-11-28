@@ -18,14 +18,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
 {
-
-    // blog main page
-    /**
-     * PostController constructor.
-     */
-
-
-    public function posts()
+    // blog manin page
+    public function index()
     {
 
         Carbon::setLocale('sl');
@@ -49,18 +43,17 @@ class PostController extends Controller
 
 
         return view('pages.posts', ['posts' => $posts, 'newPosts' => $newPosts]);
-    }
 
-    // obrazec za vnos objav
-    // zraven posljem podatke o kategorijah, ki jih lahko zbiras
-    public function writeNewPost(){
+    }
+    // write new post
+    public function create(){
         $categories = Category::all();
         return view('pages.new_post', ['categories' => $categories]);
     }
     
 
     // funkcija saveNewPost shrani novo objavo v bazo podatkov
-    public function saveNewPost(StorePostRequest $request ){
+    public function store(StorePostRequest $request ){
         $post = new Post;
         $datePublished = $request->get('date_published');
         // pretvri tekst v datum 
@@ -84,11 +77,11 @@ class PostController extends Controller
                 $category->posts()->attach($post->id);
             }
         }
-        return redirect('/')->with('status', 'Objava: '.$post->title.' je bila uspešno shranjena');
+        return redirect(route('blog'))->with('status', 'Objava: '.$post->title.' je bila uspešno shranjena');
     }
 
     // podrobnosti posamezne objave
-    public function postDetails($id){
+    public function show($id){
 
         $post = Post::find($id);
         Carbon::setLocale( "sl");
@@ -96,20 +89,22 @@ class PostController extends Controller
         $post->date_published = date('d.M.Y', $datum);
         return view('pages.post_details', ['post' => $post]);
     }
-    public function editPost($id){
+    // edit post form
+    public function edit($id){
         $post = Post::find($id);
         $categories = Category::all();
         return view('pages.edit_post', ['post' => $post, 'categories' => $categories]);
     }
 
-    // urejanje objav update_post
-    public function updatePost(StorePostRequest $request, $id){
+    // save updated post
+    public function update(StorePostRequest $request, $id){
         $post = Post::find($id);
         $title = $request->get('title');
         $content = $request->get('content');
         $categories = $request->get('categories');
 
-        // Ce oznacis kategorije jih doda k prejsnjim
+        // deletes all categories and adds new ones
+        $post->categories()->detach();
         if($categories != null){
             for($i = 0; $i < count($categories); $i++){
                 $category = Category::find($categories[$i]);
@@ -121,7 +116,7 @@ class PostController extends Controller
         $post->content = $content;
         $post->save();
 
-        return redirect(route('details', ['id' => $id]))->with('status', 'Objava: '. $post->title. ' je bila spremenjena');
+        return redirect(route('posts.show', ['id' => $id]))->with('status', 'Objava: '. $post->title. ' je bila spremenjena');
     }
 
 

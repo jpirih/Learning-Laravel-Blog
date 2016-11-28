@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Laravel\Socialite\Facades\Socialite;
 
 class SiteController extends Controller
 {
@@ -36,4 +37,5 @@ class SiteController extends Controller
     public function contact(){
         return view('pages.contact');
     }
+
 }

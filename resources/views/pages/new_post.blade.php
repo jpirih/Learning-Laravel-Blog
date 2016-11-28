@@ -28,7 +28,7 @@
                     </div>
                     @endif
                 <!-- PostController funkcija ->savePost() -->
-                <form action="" method="post">
+                <form action="{{ route('posts.store') }}" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <label for="title">Naslov</label>

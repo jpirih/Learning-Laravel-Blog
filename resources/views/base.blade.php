@@ -35,8 +35,32 @@
         <div class="collapse navbar-collapse" id="nav_zg" >
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/">Domov</a></li>
-                <li><a href="/o-meni">O meni</a></li>
-                <li><a href="/kontakt">Kontakt - Lokacija </a></li>
+                <li><a href="{{ route('about') }}">O meni</a></li>
+                <li><a href="{{ route('contact') }}">Kontakt - Lokacija </a></li>
+                <!-- Authentication Links -->
+                @if (Auth::guest())
+                    <li><a href="{{ url('/login') }}">Login</a></li>
+                    <li><a href="{{ url('/register') }}">Register</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }}
+                            ({{Auth::user()->roles->first()->name}})
+
+
+                            <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            @if(Auth::user()->roles->first()->name === 'Admin')
+                                <li><a href="{{ route('admin-dashboard') }}">Admin Dashboard</a></li>
+
+                            @endif
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                @endif
+
 
             </ul>
         </div>

@@ -69,6 +69,7 @@
                 <thead>
                 <tr class="glava">
                     <th># Id</th>
+                    <th># Id</th>
                     <th>Naslov</th>
                     <th>Datum objave</th>
                     <th>Napisano</th>
@@ -79,7 +80,7 @@
                 @foreach($posts as $post)
                     <tr>
                         <td>{{ $post->id }}</td>
-                        <td><a href="{{ route('details', ['id' => $post->id]) }}">{{ $post->title }}</a></td>
+                        <td><a href="{{ route('posts.show', ['id' => $post->id]) }}">{{ $post->title }}</a></td>
                         <td>{{$post->date_published}}</td>
                         <td>{{ $post->created_at->format('d.M.Y H:i:s') }}</td>
                         <td>{{ $post->updated_at->diffForHumans() }}</td>

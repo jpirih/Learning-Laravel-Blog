@@ -49,7 +49,7 @@
                         </div>
                     @endif
 
-                    <form action="" method="post">
+                    <form action="{{ route('posts.update', ['id' => $post->id]) }}" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
                             <label for="title">Naslov</label>

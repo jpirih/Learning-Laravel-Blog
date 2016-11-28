@@ -73,7 +73,7 @@
             </tr>
             @foreach($newPosts as $item)
                 <tr>
-                    <td><a href="{{ route('details', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
+                    <td><a href="{{ route('posts.show', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
                     <td>{{ $item->created_at}}</td>
                 </tr>
             @endforeach

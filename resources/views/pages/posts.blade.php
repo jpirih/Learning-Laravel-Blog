@@ -18,7 +18,7 @@
 @section('content')
     <!-- levi stolpec opozorilo blog v izdelavi -->
     <div class="col-sm-3">
-        <h4>Aplikcaije Php Laravel </h4>
+        <h3>Aplikcaije  </h3>
         <div class="list-group">
             <a href="/" class="list-group-item active">Blog</a>
             <a href="http://pohod.kekec-apps.com" target="_blank" class="list-group-item">Hobby PD</a>
@@ -62,7 +62,7 @@
                                 <sapn class="krepko">Datum objave: </sapn> {{ $post->date_published }}
                             </p>
                             <p>
-                                <a href="{{ route('details', ['id' => $post->id]) }}" class="btn-primary btn">
+                                <a href="{{ route('posts.show', ['id' => $post->id]) }}" class="btn-primary btn">
                                     Podrobnosti ...
                                 </a>
                             </p>
@@ -78,7 +78,7 @@
     <!-- desni meni Gumb za nove objave -->
     <div class="col-sm-3">
         <div>
-            <a href="{{ route('new_post') }}" class="btn btn-block btn-success"><span class="glyphicon glyphicon-plus"></span>
+            <a href="{{ route('posts.create') }}" class="btn btn-block btn-success"><span class="glyphicon glyphicon-plus"></span>
                 Nova objava
             </a>
         </div>
@@ -92,7 +92,7 @@
             </tr>
             @foreach($newPosts as $item)
                 <tr>
-                    <td><a href="{{ route('details', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
+                    <td><a href="{{ route('posts.show', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
                     <td>{{ $item->created_at->format('d.m.Y H:i:s')}}</td>
                 </tr>
             @endforeach

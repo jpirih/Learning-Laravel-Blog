@@ -17,6 +17,7 @@
         @if(session('status'))
             <div class="alert alert-success">
                 <span class="glyphicon glyphicon-check"></span>
+
                 {{session('status')}}
             </div>
         @endif
@@ -55,7 +56,7 @@
                     <span class="glyphicon glyphicon-home"></span>
                     Domov
                 </a>
-                <a href="{{ route('edit_post', ['id' => $post->id]) }}" class="btn btn-info">
+                <a href="{{ route('posts.edit', ['id' => $post->id]) }}" class="btn btn-info">
                     <span class="glyphicon glyphicon-edit"></span>
                     Uredi
                 </a>
