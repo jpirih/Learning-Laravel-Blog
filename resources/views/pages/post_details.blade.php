@@ -96,7 +96,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <form action="{{ route('save_comment', ['id' => $post->id]) }}" method="post" class="form-horizontal">
+                        <form action="{{ route('comments.store', ['id' => $post->id]) }}" method="post" class="form-horizontal">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="form-group">
                                 <label for="name" class="col-sm-2 control-label">Zadeva</label>

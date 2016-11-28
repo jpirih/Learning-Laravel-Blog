@@ -41,7 +41,7 @@ Route::group(['middleware' =>['web', "roles"], "roles" => ['Admin', 'Author', 'U
     Route::get('posts/{id}', ['uses' => 'PostController@show', 'as' => 'posts.show']);
     Route::get('zbirnik-objav', ['uses' => 'PostController@allPosts', 'as' => 'dashboard']);
     Route::post('create-category', ['uses' => 'PostController@saveCategory', 'as' => 'crete_category']);
-    Route::post('objava/{id}/comment', ['uses' => 'PostController@saveComment', 'as' => 'save_comment']);
+    Route::post('posts/{id}/comment', ['uses' => 'CommentController@store', 'as' => 'comments.store']);
     Route::get('posts/{id}/edit', ['uses' => 'PostController@edit', 'as' => 'posts.edit']);
     Route::post('posts/{id}', ['uses' => 'PostController@update', 'as' => 'posts.update']);
 });
