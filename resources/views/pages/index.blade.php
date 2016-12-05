@@ -66,22 +66,26 @@
         <hr>
         <!-- tabela najnovejši trije za prikazovanje skrbi SiteController ->index funkcija -->
         <h4>Najnovejše na Blogu </h4>
-        <table class="table table-responsive table-bordered">
-            <tr class="glava">
-                <th>Naslov</th>
-                <th>Napisano</th>
-            </tr>
-            @foreach($newPosts as $item)
-                <tr>
-                    <td><a href="{{ route('posts.show', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
-                    <td>{{ $item->created_at}}</td>
+        @if(count($newPosts)=== 0)
+            <div class="alert alert-info">
+                <span class="glyphicon glyphicon-info-sign"></span>
+                Trenutno ni novih objav na blogu
+            </div>
+        @else
+            <table class="table table-responsive table-bordered">
+                <tr class="glava">
+                    <th>Naslov</th>
+                    <th>Napisano</th>
                 </tr>
-            @endforeach
+                @foreach($newPosts as $item)
+                    <tr>
+                        <td><a href="{{ route('posts.show', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
+                        <td>{{ $item->created_at}}</td>
+                    </tr>
+                @endforeach
 
-        </table>
-        <!-- link na tabelo vseh objav  -->
-        <a href="{{ route('blog') }}" class="btn btn-block btn-success"><span class="glyphicon glyphicon-align-justify"></span>
-            Blog
-        </a>
+            </table>
+        @endif
+
     </div>
 @endsection

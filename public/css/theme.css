@@ -25,3 +25,9 @@
     border-radius: 5px;
     padding: 15px;
 }
+
+.table-header{
+    color: #FFFFFF;
+    background: #33CC33;
+    font-weight: bold;
+}

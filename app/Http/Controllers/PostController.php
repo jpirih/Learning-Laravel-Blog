@@ -3,25 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Comment;
 use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\StoreCommenttRequest;
 use App\Http\Requests\StorePostRequest;
 use App\Post;
 use Carbon\Carbon;
-use Faker\Provider\zh_TW\DateTime;
-use Illuminate\Support\Facades\Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\RedirectResponse;
-use Laravel\Socialite\Facades\Socialite;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
     // blog manin page
     public function index()
     {
-
+        // date time options
         Carbon::setLocale('sl');
         $danes = Carbon::today();
 
@@ -50,10 +43,11 @@ class PostController extends Controller
         $categories = Category::all();
         return view('pages.new_post', ['categories' => $categories]);
     }
-    
+
 
     // funkcija saveNewPost shrani novo objavo v bazo podatkov
     public function store(StorePostRequest $request ){
+        $userId = Auth::user()->id;
         $post = new Post;
         $datePublished = $request->get('date_published');
         // pretvri tekst v datum 
@@ -63,8 +57,9 @@ class PostController extends Controller
         $title = $request->get('title');
         $content = $request->get('content');
         $post->title = $title;
-        $post->content = $content;
+        $post->body = $content;
         $post->date_published = $date;
+        $post->user_id = $userId;
         $post->save();
         
         // post je treba najprej shraniti da ima svoj id sele potem povezujem kategorije
@@ -91,9 +86,18 @@ class PostController extends Controller
     }
     // edit post form
     public function edit($id){
+        $currentUser = Auth::user();
         $post = Post::find($id);
         $categories = Category::all();
-        return view('pages.edit_post', ['post' => $post, 'categories' => $categories]);
+
+        if(($currentUser->id == $post->user_id) || ($currentUser->roles()->first()->name == 'Admin'))
+        {
+            $user = $currentUser;
+            return view('pages.edit_post', ['post' => $post, 'categories' => $categories, 'user' => $user]);
+        }
+        Auth::logout($currentUser);
+
+        return redirect()->route('login')->with('status', 'Objave na blogu lahko ureja samo Avtor ali adminstrator.');
     }
 
     // save updated post
@@ -113,13 +117,11 @@ class PostController extends Controller
         }
         // post update
         $post->title = $title;
-        $post->content = $content;
+        $post->body = $content;
         $post->save();
 
         return redirect(route('posts.show', ['id' => $id]))->with('status', 'Objava: '. $post->title. ' je bila spremenjena');
     }
-
-
 
     // pregled vseh objav - tabela
     public function allPosts(){

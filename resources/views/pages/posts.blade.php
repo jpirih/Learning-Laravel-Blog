@@ -56,10 +56,11 @@
                         <div class="well">
                             <h2> {{ $post->title }} </h2>
                             <p>
-                                {{ $post->content }}
+                                {{ $post->body }}
                             </p>
                             <p>
-                                <sapn class="krepko">Datum objave: </sapn> {{ $post->date_published }}
+                                <sapn class="krepko">Datum objave: </sapn> {{ $post->date_published }} <br>
+                                <span class="krepko">Avtor</span> {{ $post->user->first_name }} {{ $post->user->last_name }}
                             </p>
                             <p>
                                 <a href="{{ route('posts.show', ['id' => $post->id]) }}" class="btn-primary btn">
@@ -85,23 +86,32 @@
         <hr>
         <!-- tabela najnovejši trije za prikazovanje skrbi SiteController ->index funkcija -->
         <h4>Najnovejše tri</h4>
-        <table class="table table-responsive table-bordered">
-            <tr class="glava">
-                <th>Naslov</th>
-                <th>Napisano</th>
-            </tr>
-            @foreach($newPosts as $item)
-                <tr>
-                    <td><a href="{{ route('posts.show', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
-                    <td>{{ $item->created_at->format('d.m.Y H:i:s')}}</td>
+        @if(count($newPosts)=== 0)
+            <div class="alert alert-info">
+                <span class="glyphicon glyphicon-info-sign"></span>
+                Trenutno ni novih objav na blogu
+            </div>
+        @else
+            <table class="table table-responsive table-bordered">
+                <tr class="glava">
+                    <th>Naslov</th>
+                    <th>Napisano</th>
                 </tr>
-            @endforeach
+                @foreach($newPosts as $item)
+                    <tr>
+                        <td><a href="{{ route('posts.show', ['id' => $item->id])  }}">{{ $item->title }}</a></td>
+                        <td>{{ $item->created_at->format('d.M.Y H:i:s')}}</td>
+                    </tr>
+                @endforeach
 
-        </table>
+            </table>
+    @endif
         <!-- link na tabelo vseh objav  -->
-        <a href="/zbirnik-objav" class="btn btn-primary btn-block">
-            <span class="glyphicon glyphicon-th-list"></span>
-            Dashboard
-        </a>
+        @if(Auth::user())
+            <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" class="btn btn-primary btn-block">
+                <span class="glyphicon glyphicon-th-list"></span>
+                Dashboard
+            </a>
+        @endif
     </div>
 @endsection

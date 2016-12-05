@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use App\User;
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
+use Illuminate\Support\Facades\Request;
 
 class DashboardController extends Controller
 {
-    // dasboard index
+    // dasboard index - user managemnt
     public function dashboard()
     {
-        $users = User::all();
-        return view('pages.dashboard', ['users' => $users]);
-
+        return view('admin.dashboard');
     }
+
+    
+
 
 
 }
