@@ -1,5 +1,4 @@
-@extends('base');
-
+@extends('base')
 @section('title')
     User Profile | {{ $user->nickname }}
 @endsection
@@ -10,8 +9,28 @@
 
 @section('content')
     <div class="row">
-
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Podatki o uporabniku</h3>
+                    <h4>{{ $user->first_name }}  {{ $user->last_name }} - <span class="text-muted">{{ $user->nickname }}</span></h4>
+                    <p>
+                        <span class="krepko">Tip uporabnika: </span> {{ $user->roles()->first()->name }} <br>
+                        <span class="krepko">Email: </span> {{ $user->email }}
+                    </p>
+                </div>
+                <div class="panel-footer">
+                    <a href="{{ route('blog') }}" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        Nazaj - Back
+                    </a>
+                    @if($user->hasRole('Admin'))
+                        <a href="{{ route('admin-dashboard') }}" class="btn btn-success">Admin Dashboard</a>
+                    @endif
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
             @if(count($posts) === 0)
                 <div class="alert alert-info">
                     <span class="glyphicon glyphicon-info-sign"></span>

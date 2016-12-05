@@ -61,7 +61,7 @@ class UsersController extends Controller
         if(($currentUser->id == $userId) || ($currentUserRole == $admin))
         {
             $posts = Post::where('user_id', $userId)->get();
-            $user = $currentUser;
+            $user = User::find($userId);
 
             return view('pages.user_profile', ['posts' => $posts, 'user' => $user]);
         }
