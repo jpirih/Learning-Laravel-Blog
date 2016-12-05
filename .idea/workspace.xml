@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e8aed87-16e3-47fa-a71d-df7182c4525a" name="Default" comment="updated post commenting -&gt; cleaning a little">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/blog.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/user_profile.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Comment.php" afterPath="$PROJECT_DIR$/app/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckRole.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckRole.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Post.php" afterPath="$PROJECT_DIR$/app/Post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_03_065125_create_comments_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_03_065125_create_comments_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/RoleTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/RoleTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/theme.css" afterPath="$PROJECT_DIR$/public/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/base.blade.php" afterPath="$PROJECT_DIR$/resources/views/base.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/edit_post.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/edit_post.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/post_details.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/post_details.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/posts.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/posts.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/posts_dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/posts_dashboard.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/user_profile.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/user_profile.blade.php" />
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <file leaf-file-name="user_profile.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/user_profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="316">
+              <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -132,16 +107,16 @@
         <option value="$PROJECT_DIR$/resources/views/base.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/blog.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/posts_dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/user_profile.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/posts.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/post_details.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/RegisterUserRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/RegisterUserRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/user_profile.blade.php" />
       </list>
     </option>
   </component>
@@ -316,7 +291,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/register.blade.php&#10;Aut&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/AuthController.php&#10;regis&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/register.blade.php&#10;create_use&#9;FILE&#9;file://D:/Code/KekecApps/Blog/database/migrations/2016_11_28_154736_create_users_table.php&#10;RegisterUser&#9;null&#9;null&#10;StorPo&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Requests/StorePostRequest.php&#10;dash&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts_dashboard.blade.php&#10;rout&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;us&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/UsersController.php&#10;post_de&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/post_details.blade.php&#10;Au&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/AuthController.php&#10;post&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;posts&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;route&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;users&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/UsersController.php&#10;posts_da&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts_dashboard.blade.php&#10;rou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;base&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;Users&#9;null&#9;null&#10;the&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;ro&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;DA&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/DashboardController.php&#10;Da&#9;FILE&#9;file://D:/Code/KekecApps/Blog/database/seeds/DatabaseSeeder.php&#10;da&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/DashboardController.php&#10;D&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/DashboardController.php&#10;th&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;theme&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;das&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/dashboard.blade.php&#10;ba&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;Po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;de&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/edit_post.blade.php&#10;edit&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/edit_post.blade.php&#10;po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;aut&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/AuthController.php&#10;logi&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/login.blade.php&#10;registe&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/register.blade.php&#10;i&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/index.blade.php&#10;inde&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/index.blade.php&#10;Post&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Post.php&#10;Comment&#9;null&#9;null&#10;P&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Post.php&#10;User&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/User.php&#10;pos&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;log&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/login.blade.php&#10;regi&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/register.blade.php&#10;lo&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/login.blade.php&#10;Chec&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Middleware/CheckRole.php&#10;Auth&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/Auth/AuthController.php&#10;PO&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;ed&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/edit_post.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="user&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/user_profile.blade.php&#10;Aut&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/AuthController.php&#10;regis&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/register.blade.php&#10;create_use&#9;FILE&#9;file://D:/Code/KekecApps/Blog/database/migrations/2016_11_28_154736_create_users_table.php&#10;RegisterUser&#9;null&#9;null&#10;StorPo&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Requests/StorePostRequest.php&#10;dash&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts_dashboard.blade.php&#10;rout&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;us&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/UsersController.php&#10;post_de&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/post_details.blade.php&#10;Au&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/AuthController.php&#10;post&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;posts&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;route&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;users&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/UsersController.php&#10;posts_da&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts_dashboard.blade.php&#10;rou&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;base&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;Users&#9;null&#9;null&#10;the&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;ro&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/routes.php&#10;DA&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/DashboardController.php&#10;Da&#9;FILE&#9;file://D:/Code/KekecApps/Blog/database/seeds/DatabaseSeeder.php&#10;da&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/DashboardController.php&#10;D&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/DashboardController.php&#10;th&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;theme&#9;FILE&#9;file://D:/Code/KekecApps/Blog/public/css/theme.css&#10;das&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/dashboard.blade.php&#10;ba&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/base.blade.php&#10;Po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;de&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/edit_post.blade.php&#10;edit&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/edit_post.blade.php&#10;po&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/posts.blade.php&#10;aut&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/AuthController.php&#10;logi&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/login.blade.php&#10;registe&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/register.blade.php&#10;i&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/index.blade.php&#10;inde&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/index.blade.php&#10;Post&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Post.php&#10;Comment&#9;null&#9;null&#10;P&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Post.php&#10;User&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/User.php&#10;pos&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;log&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/login.blade.php&#10;regi&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/register.blade.php&#10;lo&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/auth/login.blade.php&#10;Chec&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Middleware/CheckRole.php&#10;Auth&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/Auth/AuthController.php&#10;PO&#9;FILE&#9;file://D:/Code/KekecApps/Blog/app/Http/Controllers/PostController.php&#10;ed&#9;FILE&#9;file://D:/Code/KekecApps/Blog/resources/views/pages/edit_post.blade.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -471,7 +446,8 @@
       <workItem from="1480829073260" duration="29000" />
       <workItem from="1480837648998" duration="14000" />
       <workItem from="1480949157079" duration="7004000" />
-      <workItem from="1480956551554" duration="1334000" />
+      <workItem from="1480956551554" duration="2093000" />
+      <workItem from="1480958876347" duration="272000" />
     </task>
     <task id="LOCAL-00001" summary="Links updated">
       <created>1479322088446</created>
@@ -666,7 +642,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203881000" />
+    <option name="totallyTimeSpent" value="204912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,28 +655,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25833333" sideWeight="0.49640933" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25833333" sideWeight="0.49640933" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25833333" sideWeight="0.50359064" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944345" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -981,13 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/user_profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/posts.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="909">
@@ -1038,26 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <marker date="1480697833594" expanded="true" signature="35:60" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="97:122" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="154:1900" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="180:227" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="254:1887" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="414:610" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="435:591" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="701:1876" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="721:1603" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="738:1486" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="771:1468" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="869:1446" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="1005:1418" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="1056:1205" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="1257:1387" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="1503:1582" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="1623:1858" ph="..." />
-            <marker date="1480697833594" expanded="true" signature="1691:1813" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,12 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <marker date="1480349234984" expanded="true" signature="88:626" ph="{...}" />
-            <marker date="1480349234984" expanded="true" signature="218:269" ph="..." />
-            <marker date="1480349234984" expanded="true" signature="387:465" ph="..." />
-            <marker date="1480349234984" expanded="true" signature="567:624" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,26 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <marker date="1480953683453" expanded="false" signature="44:211" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="252:5079" ph="{...}" />
-            <marker date="1480953683453" expanded="true" signature="305:1108" ph="{...}" />
-            <marker date="1480953683453" expanded="true" signature="640:820" ph="{...}" />
-            <marker date="1480953683453" expanded="true" signature="837:943" ph="{...}" />
-            <marker date="1480953683453" expanded="true" signature="1160:1274" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="1395:2595" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="2209:2479" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="2265:2469" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="2664:2905" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="2959:3495" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="3171:3334" ph="{...}" />
-            <marker date="1480953683453" expanded="true" signature="3582:4315" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="3877:4072" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="3933:4062" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="4384:4755" ph="..." />
-            <marker date="1480953683453" expanded="true" signature="4482:4614" ph="{...}" />
-            <marker date="1480953683453" expanded="true" signature="4882:5076" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,15 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1458543850553" expanded="false" signature="41:114" ph="..." />
-            <marker date="1458543850553" expanded="true" signature="154:576" ph="{...}" />
-            <marker date="1458543850553" expanded="true" signature="164:262" ph=" Determine if the user is authorized to make this request. ..." />
-            <marker date="1458543850553" expanded="true" signature="296:329" ph="{...}" />
-            <marker date="1458543850553" expanded="true" signature="338:431" ph=" Get the validation rules that apply to the request. ..." />
-            <marker date="1458543850553" expanded="true" signature="461:573" ph="{...}" />
-            <marker date="1458543850553" expanded="true" signature="484:565" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1138,31 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <marker date="1480344655997" expanded="false" signature="11:133" ph="..." />
-            <marker date="1480344655997" expanded="true" signature="175:834" ph="{...}" />
-            <marker date="1480344655997" expanded="true" signature="185:245" ph=" Run the migrations. ..." />
-            <marker date="1480344655997" expanded="true" signature="272:687" ph="{...}" />
-            <marker date="1480344655997" expanded="true" signature="302:679" ph="..." />
-            <marker date="1480344655997" expanded="true" signature="340:678" ph="..." />
-            <marker date="1480344655997" expanded="true" signature="696:760" ph=" Reverse the migrations. ..." />
-            <marker date="1480344655997" expanded="true" signature="789:832" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/RegisterUserRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1480957403722" expanded="true" signature="110:720" ph="{...}" />
-            <marker date="1480957403722" expanded="true" signature="120:218" ph=" Determine if the user is authorized to make this request. ..." />
-            <marker date="1480957403722" expanded="true" signature="252:285" ph="{...}" />
-            <marker date="1480957403722" expanded="true" signature="294:387" ph=" Get the validation rules that apply to the request. ..." />
-            <marker date="1480957403722" expanded="true" signature="417:718" ph="{...}" />
-            <marker date="1480957403722" expanded="true" signature="440:710" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1185,8 +1074,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="-256">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/RegisterUserRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding>
+            <marker date="1480958550704" expanded="true" signature="110:720" ph="{...}" />
+            <marker date="1480958550704" expanded="true" signature="120:218" ph=" Determine if the user is authorized to make this request. ..." />
+            <marker date="1480958550704" expanded="true" signature="252:285" ph="{...}" />
+            <marker date="1480958550704" expanded="true" signature="294:387" ph=" Get the validation rules that apply to the request. ..." />
+            <marker date="1480958550704" expanded="true" signature="417:718" ph="{...}" />
+            <marker date="1480958550704" expanded="true" signature="440:710" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/user_profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding />
         </state>
       </provider>
