@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e8aed87-16e3-47fa-a71d-df7182c4525a" name="Default" comment="end of login testing">
+    <list default="true" id="6e8aed87-16e3-47fa-a71d-df7182c4525a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -469,7 +467,7 @@
       <workItem from="1481448497551" duration="1285000" />
       <workItem from="1481452233344" duration="9738000" />
       <workItem from="1481467435608" duration="5000" />
-      <workItem from="1481470970805" duration="56000" />
+      <workItem from="1481470970805" duration="98000" />
     </task>
     <task id="LOCAL-00001" summary="Links updated">
       <created>1479322088446</created>
@@ -681,11 +679,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480962112738</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="admin dashboard update">
+      <created>1481471050259</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1481471050259</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237531000" />
+    <option name="totallyTimeSpent" value="237573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,7 +783,8 @@
     <MESSAGE value="updated post commenting -&gt; cleaning a little" />
     <MESSAGE value="User profile building up  start  phases" />
     <MESSAGE value="User profile building up  update 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="User profile building up  update 2" />
+    <MESSAGE value="admin dashboard update" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin dashboard update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
