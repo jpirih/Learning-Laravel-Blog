@@ -7,24 +7,18 @@ use App\Comment;
 use App\Post;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Request;
-
 class DashboardController extends Controller
 {
     // admin dashboard index
     public function dashboard()
     {
         $recentPosts = Post::all()->sortByDesc('date_published')->take(3);
-
         $recentComments = Comment::all()->sortByDesc('created_at')->take(3);
-
 
         $data = [
             'recentPosts' => $recentPosts,
             'recentComments' => $recentComments
         ];
-
         return view('admin.dashboard', $data);
     }
 
@@ -40,7 +34,6 @@ class DashboardController extends Controller
         }
 
         $data = ['categories' => $categories, 'posts' => $posts];
-
         return view('admin.blog', $data);
     }
 }

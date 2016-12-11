@@ -20,6 +20,7 @@
         <div class="btn-group btn-group-lg" role="group" aria-label="...">
             <a href="{{ route('admin-users') }}" class="btn btn-default">Users</a>
             <a href="{{ route('admin-blog') }}" class="btn btn-default">Blog</a>
+            <a href="http://finance.kekec-apps.com" class="btn btn-default">Moje Finance</a>
         </div>
     </div>
 
