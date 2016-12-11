@@ -1,13 +1,28 @@
 @extends('base')
 
+@section('title')
+    Prijava / Login
+@endsection
+
+@section('page-heading')
+    Prijava Login
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
+        @if(session('status'))
+            <div class="alert alert-warning">
+                <span class=" glyphicon glyphicon-warning-sign"></span>
+                {{ session('status') }}
+            </div>
+        @endif
+        <br>
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('user.login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -50,7 +65,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-sign-in"></i> Login
                                 </button>
 

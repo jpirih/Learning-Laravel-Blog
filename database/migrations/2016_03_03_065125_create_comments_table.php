@@ -18,6 +18,8 @@ class CreateCommentsTable extends Migration
             $blueprint->integer('post_id');
             $blueprint->text('name');
             $blueprint->text('body');
+            $blueprint->integer('user_id')->default(1);
+            $blueprint->boolean('deleted')->default(false);
             $blueprint->timestamps();
         });
     }

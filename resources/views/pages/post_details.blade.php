@@ -41,18 +41,14 @@
                     <hr>
                     <span class="krepko">Vsebina Objave: </span>
                     <p>
-                        {{ $post->content }}
+                        {{ $post->body }}
                     </p>
                 </div>
 
 
             </div>
             <div class="panel-footer">
-                <a href="{{ route('dashboard') }}" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-th-list"></span>
-                    Dashboard
-                </a>
-                <a href="/" class="btn btn-success">
+                <a href="{{ route('blog') }}" class="btn btn-success">
                     <span class="glyphicon glyphicon-home"></span>
                     Domov
                 </a>
@@ -60,6 +56,7 @@
                     <span class="glyphicon glyphicon-edit"></span>
                     Uredi
                 </a>
+
             </div>
         </div>
         <div class="panel panel-primary">
@@ -73,8 +70,11 @@
                     </div>
                 @else
                     @foreach($post->comments as $comment)
-                        <div class="well">
+                        <div class="comment-box">
                             <h4>{{ $comment->name }}</h4>
+                            <p>
+                                <span class="text-muted">Objavljeno: {{ $comment->created_at->format('d.m.y @ H:i:s') }} by {{ $comment->user->nickname }}</span>
+                            </p>
                             <p>
                                 {{ $comment->body }}
                             </p>

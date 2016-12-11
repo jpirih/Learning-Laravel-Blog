@@ -58,7 +58,7 @@
                         <div class="form-group">
                             <label for="content">Vsebina Objave</label>
                     <textarea name="content" id="content" cols="30" rows="10" class="form-control">
-                        {{ $post->content }}
+                        {{ $post->body }}
                     </textarea>
                         </div>
                         <!-- Kategorije -->

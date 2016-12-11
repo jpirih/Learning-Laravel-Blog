@@ -7,24 +7,18 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     protected $table = 'users';
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
+    // one-to-many connection with table posts
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
+    // one-to many-connection with table comments
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+    // many-to-many-connection with table roles
     public function roles()
     {
         return $this->belongsToMany('App\Role', 'roles_users', 'user_id', 'role_id');

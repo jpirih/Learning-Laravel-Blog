@@ -17,7 +17,7 @@ class CheckRole
     {
         if($request->user() === null)
         {
-            return response('Nimate dovoljenaja za dostop do te strani', 401);
+            return redirect()->route('login')->with('status','Nimate dovoljenaja za dostop do te strani. Obvezna Prijava');
         }
         $actions= $request->route()->getAction();
         $roles = isset($actions['roles']) ? $actions['roles']: null;
@@ -26,6 +26,6 @@ class CheckRole
         {
             return $next($request);
         }
-        return response('Nimate dovoljenaja za dostop do te strani', 401);
+        return redirect()->route('login')->with('status', 'Nimate dovoljenaja za dostop do te strani. Prijava je obvezna ');
     }
 }
