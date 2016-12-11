@@ -15,13 +15,11 @@ class AuthController extends Controller
     {
         return view('auth.register');
     }
-
     // login page
     public function getLoginPage()
     {
         return view('auth.login');
     }
-
     // save new user data to database -> default user role is User
     public function postRegistration(RegisterUserRequest $request)
     {
@@ -45,7 +43,7 @@ class AuthController extends Controller
     {
         if(Auth::attempt(['email' => $request::get('email'), 'password' => $request::get('password')]))
         {
-            return redirect()->route('blog')->with('status', 'Prijavljeni ste kost '. Auth::user()->nickname);
+            return redirect()->route('blog')->with('status', 'Prijavljeni ste kot '. Auth::user()->nickname);
         }
         return redirect()->back()->with('status', 'Prišlo je do napke poskusite ponovno');
     }
@@ -56,6 +54,4 @@ class AuthController extends Controller
         Auth::logout();
         return redirect()->route('blog')->with('status', 'Uspešno ste se odjavili');
     }
-
-
 }

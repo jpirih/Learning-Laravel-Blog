@@ -1,2 +1,69 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+$infoColor: #e6ffff;
+$profileColor: #337ab7;
+$adminColor: #33CC33;
+$headerTextColor: #ffffff;
+$commentColor: #ccff99;
+
+// border radius
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// box defalut  class
+.box {
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 15px;
+  @include border-radius(5px)
+}
+
+.header{
+  @extend .krepko;
+  color: $headerTextColor;
+}
+// bold text class
+.krepko{
+  font-weight: bold;
+}
+
+.index-img{
+  width: 100%;
+  height: 240px;
+}
+
+.post{
+  background-color: lightyellow;
+}
+.posts{
+  background-color: lightgoldenrodyellow;
+  border: 2px solid black;
+}
+.glava {
+  background: $profileColor;
+  @extend .header;
+
+}
+.info-box{
+  @extend .box;
+  color: $headerTextColor;
+  background: $infoColor;
+  @extend .krepko
+}
+
+.table-header{
+  @extend .header;
+  background: $adminColor;
+
+}
+.comment-box{
+  @extend .box;
+  background: $commentColor;
+}
+
+.default-box{
+  @extend .box
+}

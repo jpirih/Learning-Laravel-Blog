@@ -1,9 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
-
 use App\Post;
 use App\Role;
 use App\User;
@@ -54,19 +51,13 @@ class UsersController extends Controller
     {
         $currentUser = Auth::user();
         $currentUserRole = $currentUser->roles()->first()->name;
-        $normalUser = 'User';
         $admin = 'Admin';
-
-
         if(($currentUser->id == $userId) || ($currentUserRole == $admin))
         {
             $posts = Post::where('user_id', $userId)->get();
             $user = User::find($userId);
-
             return view('pages.user_profile', ['posts' => $posts, 'user' => $user]);
         }
-
-
         return redirect()->route('login')->with('status', 'Za ogled te strani je potrebna prijava.');
     }
 }

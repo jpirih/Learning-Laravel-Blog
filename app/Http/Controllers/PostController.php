@@ -33,10 +33,7 @@ class PostController extends Controller
             }
 
         $newPosts = Post::orderBy('created_at', 'desc')->take(3)->get();
-
-
         return view('pages.posts', ['posts' => $posts, 'newPosts' => $newPosts]);
-
     }
     // write new post
     public function create(){
@@ -106,7 +103,6 @@ class PostController extends Controller
         $title = $request->get('title');
         $content = $request->get('content');
         $categories = $request->get('categories');
-
         // deletes all categories and adds new ones
         $post->categories()->detach();
         if($categories != null){
@@ -119,24 +115,9 @@ class PostController extends Controller
         $post->title = $title;
         $post->body = $content;
         $post->save();
-
         return redirect(route('posts.show', ['id' => $id]))->with('status', 'Objava: '. $post->title. ' je bila spremenjena');
     }
 
-    // pregled vseh objav - tabela
-    public function allPosts(){
-        Carbon::setLocale('sl');
-        $posts = Post::all();
-
-        foreach ($posts as $post)
-        {
-            $date = strtotime($post->date_published);
-            $post->date_published = date('d.M.Y', $date);
-        }
-
-        $categories = Category::all();
-        return view('pages.posts_dashboard', ['posts' => $posts, 'categories' => $categories]);
-    }
 
     // funkcija za dodajanje novih kategorij - na dashbordu
     public function saveCategory(StoreCategoryRequest $request){

@@ -37,7 +37,7 @@
                     Nisi še napisal nobene objave - There is no post created by this user
                 </div>
             @else
-                <h2>Zbirni pregled vseh objav</h2>
+                <h2>Moje objave</h2>
                 <table class="table table-bordered table-responsive table-striped">
                     <thead>
                     <tr class="glava">

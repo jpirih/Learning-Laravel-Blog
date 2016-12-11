@@ -11,6 +11,38 @@
 @section('content')
     <div class="col-sm-9">
         <h2>All posts overview</h2>
+        @if(count($posts) === 0)
+            <div class="alert alert-info">
+                <span class="glyphicon glyphicon-info-sign"></span>
+                Tretutno ni shranjenih objav - There is on posts in the database.
+            </div>
+        @else
+            <table class="table table-responsive table-striped table-bordered">
+                <thead>
+                    <tr class="table-header">
+                        <th>Title / Comments</th>
+                        <th>Created at</th>
+                        <th>Published at</th>
+                        <th>Author</th>
+                        <th>Last Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach($posts as $post)
+                    <tr>
+                        <td>
+                            <a href="{{route('posts.show',['id' => $post->id])}}">{{ $post->title }}</a>
+                            <span class="badge">{{count($post->comments)}}</span>
+                        </td>
+                        <td>{{ $post->created_at->format('d.m.Y @ H:i:s') }}</td>
+                        <td>{{ $post->date_published->format('d.m.Y')}}</td>
+                        <td><a href="{{ route('user.profile', ['id' => $post->user_id]) }}">{{ $post->user->nickname }}</a></td>
+                        <td>{{ $post->updated_at->diffForHumans() }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            @endif
     </div>
     <div class="col-sm-3">
         <h3>Categories</h3>
@@ -41,7 +73,7 @@
                     </form>
                 </td>
             </tr>
-            <tr>
+            <tr class="table-header">
                 <th># Id</th>
                 <th>Naziv</th>
             </tr>

@@ -70,8 +70,11 @@
                     </div>
                 @else
                     @foreach($post->comments as $comment)
-                        <div class="well">
+                        <div class="comment-box">
                             <h4>{{ $comment->name }}</h4>
+                            <p>
+                                <span class="text-muted">Objavljeno: {{ $comment->created_at->format('d.m.y @ H:i:s') }} by {{ $comment->user->nickname }}</span>
+                            </p>
                             <p>
                                 {{ $comment->body }}
                             </p>
