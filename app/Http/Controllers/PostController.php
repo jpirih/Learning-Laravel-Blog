@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Helper;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\StorePostRequest;
 use App\Post;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
     // blog manin page
-    public function index()
+    public function index(Helper $helper)
     {
         // date time options
         Carbon::setLocale('sl');
@@ -24,8 +26,7 @@ class PostController extends Controller
         foreach ($posts as $post)
             if(gettype($post->date_published) == "string")
             {
-                $post->date_published = strtotime($post->date_published);
-                $post->date_published = date('d.M.Y', $post->date_published);
+                $post->date_published = $helper->slovenianDate($post->date_published);
             }
             else
             {
@@ -33,12 +34,12 @@ class PostController extends Controller
             }
 
         $newPosts = Post::orderBy('created_at', 'desc')->take(3)->get();
-        return view('pages.posts', ['posts' => $posts, 'newPosts' => $newPosts]);
+        return view('blog.posts', ['posts' => $posts, 'newPosts' => $newPosts]);
     }
     // write new post
     public function create(){
         $categories = Category::all();
-        return view('pages.new_post', ['categories' => $categories]);
+        return view('blog.new_post', ['categories' => $categories]);
     }
 
 
@@ -79,20 +80,18 @@ class PostController extends Controller
         Carbon::setLocale( "sl");
         $datum = strtotime($post->date_published);
         $post->date_published = date('d.M.Y', $datum);
-        return view('pages.post_details', ['post' => $post]);
+        return view('blog.post_details', ['post' => $post]);
     }
     // edit post form
-    public function edit($id){
-        $currentUser = Auth::user();
+    public function edit($id, Helper $helper){
         $post = Post::find($id);
         $categories = Category::all();
 
-        if(($currentUser->id == $post->user_id) || ($currentUser->roles()->first()->name == 'Admin'))
+        if(($helper->thisUser($post->user_id)) || ($helper->isAdmin($post->user_id)))
         {
-            $user = $currentUser;
-            return view('pages.edit_post', ['post' => $post, 'categories' => $categories, 'user' => $user]);
+            $user = User::find($post->user_id);
+            return view('blog.edit_post', ['post' => $post, 'categories' => $categories, 'user' => $user]);
         }
-        Auth::logout($currentUser);
 
         return redirect()->route('login')->with('status', 'Objave na blogu lahko ureja samo Avtor ali adminstrator.');
     }

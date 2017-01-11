@@ -1,4 +1,4 @@
-<?php
+ž<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +33,12 @@ Route::group(['middleware' =>['web', "roles"], "roles" => ['Admin', 'Moderator',
     Route::get('posts/{id}/edit', ['uses' => 'PostController@edit', 'as' => 'posts.edit']);
     Route::post('posts/{id}', ['uses' => 'PostController@update', 'as' => 'posts.update']);
     Route::get('users/{id}', ['uses' => 'UsersController@userProfile', 'as' => 'user.profile']);
+});
+
+// blog functions admin only
+Route::group(['middleware' => ['web', 'roles'], 'roles' => ['Admin']], function (){
+    Route::get('comments', 'CommentController@comments')->name('comments');
+
 });
 // admin protected section
 Route::group(['middleware' => ['web', 'roles'], 'roles' => ['Admin'], 'prefix'=> 'admin'], function (){

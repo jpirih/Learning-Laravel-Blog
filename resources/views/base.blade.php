@@ -60,11 +60,10 @@
         </div>
     </div>
 </div>
-
 <div class="container">
     <div class="row">
         <div class="page-header text-center">
-            <h1> @yield('page-heading')</h1>
+            <h1>@yield('page-heading')</h1>
              <p>
                  @yield('description')
              </p>
@@ -74,6 +73,6 @@
         @yield('content')
     </div>
 </div>
-
 </body>
 </html>
+

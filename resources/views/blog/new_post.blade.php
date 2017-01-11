@@ -2,18 +2,17 @@
 @section('title')
     Nova objava
 @endsection
-        <!-- naslov strani -->
+
 @section('page-heading')
     Napiši novo objavo
 @endsection
-        <!-- opis pod naslovom -->
+
 @section('description')
     Spodnji obrazec ti daje možnost da napišeš novo blog objavo
     Izkoristi možnosti in napiši kaj lepega :)
 @endsection
 
 @section('content')
-        <!-- obrazec za vnos objave  obrazec prikazuje PostController funkcija-> writeNewPost  -->
     <div class="col-sm-6 col-sm-offset-3">
         <div class="panel panel-primary">
             <div class="panel-body">

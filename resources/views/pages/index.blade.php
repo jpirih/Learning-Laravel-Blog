@@ -3,19 +3,16 @@
 @section('title')
     Glavna stran
 @endsection
-        <!-- glavni naslov strani -->
+
 @section('page-heading')
     Kekec-apps.com Domača stran / Home Page
 @endsection
 
-        <!-- opis pod naslovom -->
 @section('description')
     Ena ne ravno čisto običajna spletna stran :)
 @endsection
 
 @section('content')
-
-    <!--  osrednji del seznam vseh objav veliki modri box-i-->
     <div class="col-sm-9">
         @if(session('status'))
                 <div class="alert alert-success">
@@ -86,6 +83,5 @@
 
             </table>
         @endif
-
     </div>
 @endsection

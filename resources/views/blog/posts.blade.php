@@ -3,12 +3,11 @@
 @section('title')
     Blog - Glavna stran
 @endsection
-<!-- glavni naslov strani -->
+
 @section('page-heading')
     Moje pisarije - pregeld vseh
 @endsection
 
-<!-- opis pod naslovom -->
 @section('description')
     Zdravo znašel si se na mojem blogu Ta blog sem ustvari v okviru tečaja
     SmartNinja Web Development 2. Ker ne pišem bloga so sami testni članki.

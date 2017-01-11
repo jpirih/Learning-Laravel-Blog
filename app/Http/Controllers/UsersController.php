@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\Role;
 use App\User;
+use App\Http\Helper;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 
@@ -47,16 +48,21 @@ class UsersController extends Controller
     }
 
     // user profile
-    public  function userProfile($userId)
-    {
-        $currentUser = Auth::user();
+    public  function userProfile($userId, Helper $helper)
+    {/* $currentUser = Auth::user();
         $currentUserRole = $currentUser->roles()->first()->name;
-        $admin = 'Admin';
-        if(($currentUser->id == $userId) || ($currentUserRole == $admin))
+        $admin = 'Admin';*/
+        if(($helper->thisUser($userId)) || ($helper->isAdmin($userId)))
         {
             $posts = Post::where('user_id', $userId)->get();
             $user = User::find($userId);
-            return view('pages.user_profile', ['posts' => $posts, 'user' => $user]);
+
+            foreach ($posts as $post)
+            {
+                $post->date_published = $helper->slovenianDate($post->date_published);
+            }
+
+            return view('users.user_profile', ['posts' => $posts, 'user' => $user]);
         }
         return redirect()->route('login')->with('status', 'Za ogled te strani je potrebna prijava.');
     }

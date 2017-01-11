@@ -15,6 +15,3 @@ elixir(function(mix) {
     mix.sass('app.scss', 'public/assets/css');
 });
 
-elixir(function (mix) {
-    mix.script();
-});

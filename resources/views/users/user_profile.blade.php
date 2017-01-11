@@ -6,8 +6,29 @@
 @section('page-heading')
     Moj Profil
 @endsection
-
+<!-- page content -->
 @section('content')
+    <!-- dashboard buttons  -->
+    <div class="row">
+        <div class="col-sm-12 info-box text-center">
+            <div class="btn-group btn-group-lg" role="group">
+                <a href="{{ route('posts.create') }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Nova Objava
+                </a>
+                <a href="{{ route('blog') }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-list"></span>
+                    Blog
+                </a>
+                <a href="{{ route('index') }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-home"></span>
+                    Home
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- left column user info -->
     <div class="row">
         <div class="col-sm-4">
             <div class="panel panel-default">
@@ -19,6 +40,7 @@
                         <span class="krepko">Email: </span> {{ $user->email }}
                     </p>
                 </div>
+                <!-- left site buttons -->
                 <div class="panel-footer">
                     <a href="{{ route('blog') }}" class="btn btn-danger">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -30,6 +52,7 @@
                 </div>
             </div>
         </div>
+        <!-- main page content -->
         <div class="col-sm-8">
             @if(count($posts) === 0)
                 <div class="alert alert-info">

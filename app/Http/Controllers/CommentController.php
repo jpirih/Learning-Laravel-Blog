@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
+    // list of all comments
+    public function comments()
+    {
+        $comments = Comment::orderBy('created_at', 'desc')->get();
+
+        return view('blog.comments', ['comments' => $comments]);
+    }
+
+    // save comment to dadabase
     public function store( StoreCommenttRequest $request, $postId){
         $userId = Auth::user()->id;
         // pridobi podatke iz baze za posmezen post

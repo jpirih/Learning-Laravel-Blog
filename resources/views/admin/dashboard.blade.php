@@ -44,9 +44,9 @@
                    <tbody>
                    @foreach($recentPosts as $post)
                        <tr>
-                           <td>{{ $post->title }}</td>
+                           <td><a href="{{ route('posts.show', ['id' => $post->id]) }}">{{ $post->title }}</a></td>
                            <td>{{ $post->date_published }}</td>
-                           <td>{{ $post->user->nickname }}</td>
+                           <td><a href="{{ route('user.profile', ['id' => $post->user->id])}}">{{ $post->user->nickname }}</a></td>
                        </tr>
                    @endforeach
                    </tbody>
@@ -79,6 +79,10 @@
                     @endforeach
                     </tbody>
                 </table>
+                <br>
+                <a href="{{ route('comments') }}" class="btn btn-primary btn-lg" role="button">
+                    All comments
+                </a>
             </div>
         </div>
     </div>

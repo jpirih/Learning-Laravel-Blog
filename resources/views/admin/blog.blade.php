@@ -35,7 +35,7 @@
                             <span class="badge">{{count($post->comments)}}</span>
                         </td>
                         <td>{{ $post->created_at->format('d.m.Y @ H:i:s') }}</td>
-                        <td>{{ $post->date_published->format('d.m.Y')}}</td>
+                        <td>{{ $post->date_published}}</td>
                         <td><a href="{{ route('user.profile', ['id' => $post->user_id]) }}">{{ $post->user->nickname }}</a></td>
                         <td>{{ $post->updated_at->diffForHumans() }}</td>
                     </tr>
@@ -88,6 +88,5 @@
             </tbody>
 
         </table>
-    </div>
     </div>
 @endsection
