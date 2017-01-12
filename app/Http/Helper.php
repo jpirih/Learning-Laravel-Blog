@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
  */
 class Helper
 {
+    // slovenian date format
     public function slovenianDate($dateString)
     {
         $realDate = strtotime($dateString);
@@ -17,6 +18,7 @@ class Helper
         return $sloDate;
     }
 
+    // function checkes if the logged in user is the author
     public function thisUser($userId)
     {
         $currentUser = Auth::user();
@@ -27,10 +29,11 @@ class Helper
         return false;
     }
 
-    public function isAdmin ($userId)
+    // function checkes if logged in user has admin rights
+    public function isAdmin ()
     {
         $currentUser = Auth::user();
-        if($currentUser->id === $userId && $currentUser->roles->first()->name() === 'Admin')
+        if($currentUser->roles->first()->name == 'Admin')
         {
             return true;
         }
@@ -38,6 +41,19 @@ class Helper
         {
             return false;
 
+        }
+    }
+
+    // helper funciton for granting user access
+    public function userAccess($userId)
+    {
+        if($this->thisUser($userId) || $this->isAdmin())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

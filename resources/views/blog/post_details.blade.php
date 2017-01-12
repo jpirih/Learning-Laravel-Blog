@@ -56,6 +56,10 @@
                     <span class="glyphicon glyphicon-edit"></span>
                     Uredi
                 </a>
+                <a href="{{ route('posts.delete', ['id' => $post->id]) }}" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash"></span>
+                    Izbriši
+                </a>
 
             </div>
         </div>

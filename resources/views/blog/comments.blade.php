@@ -8,8 +8,9 @@
     Blog comments Overwiev
 @endsection
 @section('content')
+
         @foreach($comments as $comment)
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4">
                 <div class="comment-box">
                     <h4>{{ $comment->name }}</h4>
                     <p>
@@ -25,4 +26,5 @@
                 </div>
             </div>
         @endforeach
+
 @endsection

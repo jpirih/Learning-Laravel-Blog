@@ -23,6 +23,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('login', 'AuthController@postLogin')->name('user.login');
     Route::get('logout', 'AuthController@getLogout')->name('user.logout');
 });
+
 // blog  functions for registered users
 Route::group(['middleware' =>['web', "roles"], "roles" => ['Admin', 'Moderator', 'User']], function (){
     Route::get('posts/create', ['uses' => 'PostController@create', 'as' => 'posts.create']);
@@ -32,6 +33,7 @@ Route::group(['middleware' =>['web', "roles"], "roles" => ['Admin', 'Moderator',
     Route::post('posts/{id}/comment', ['uses' => 'CommentController@store', 'as' => 'comments.store']);
     Route::get('posts/{id}/edit', ['uses' => 'PostController@edit', 'as' => 'posts.edit']);
     Route::post('posts/{id}', ['uses' => 'PostController@update', 'as' => 'posts.update']);
+    Route::get('posts/{id}/delete', ['uses' => 'PostController@deletePost', 'as' => 'posts.delete']);
     Route::get('users/{id}', ['uses' => 'UsersController@userProfile', 'as' => 'user.profile']);
 });
 

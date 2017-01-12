@@ -52,9 +52,9 @@ class UsersController extends Controller
     {/* $currentUser = Auth::user();
         $currentUserRole = $currentUser->roles()->first()->name;
         $admin = 'Admin';*/
-        if(($helper->thisUser($userId)) || ($helper->isAdmin($userId)))
+        if($helper->userAccess($userId))
         {
-            $posts = Post::where('user_id', $userId)->get();
+            $posts = Post::where([['user_id', '=', $userId ], ['deleted', '=', false]])->get();
             $user = User::find($userId);
 
             foreach ($posts as $post)

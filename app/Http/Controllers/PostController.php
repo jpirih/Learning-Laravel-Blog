@@ -21,7 +21,8 @@ class PostController extends Controller
         $danes = Carbon::today();
 
         // posts from  database
-        $posts = Post::where('date_published', '<=', $danes)->orderBy('created_at', 'desc')->paginate(3);
+        $posts = Post::where('deleted', '=', false)->orderBy('created_at', 'desc')->paginate(3);
+
 
         foreach ($posts as $post)
             if(gettype($post->date_published) == "string")
@@ -48,9 +49,9 @@ class PostController extends Controller
         $userId = Auth::user()->id;
         $post = new Post;
         $datePublished = $request->get('date_published');
-        // pretvri tekst v datum 
-         $datePublished = strtotime($datePublished);
-        $date= date('Y-m-d', $datePublished);
+        // pretvri tekst v datum
+        $datePublished = strtotime($datePublished);
+        $date = date('Y-m-d', $datePublished);
         // shranjevanje podatkov 
         $title = $request->get('title');
         $content = $request->get('content');
@@ -87,13 +88,13 @@ class PostController extends Controller
         $post = Post::find($id);
         $categories = Category::all();
 
-        if(($helper->thisUser($post->user_id)) || ($helper->isAdmin($post->user_id)))
+        if($helper->userAccess($post->user_id))
         {
             $user = User::find($post->user_id);
             return view('blog.edit_post', ['post' => $post, 'categories' => $categories, 'user' => $user]);
         }
 
-        return redirect()->route('login')->with('status', 'Objave na blogu lahko ureja samo Avtor ali adminstrator.');
+        return redirect(route('login'))->with('status', 'Objave na blogu lahko ureja samo Avtor ali adminstrator.');
     }
 
     // save updated post
@@ -115,6 +116,19 @@ class PostController extends Controller
         $post->body = $content;
         $post->save();
         return redirect(route('posts.show', ['id' => $id]))->with('status', 'Objava: '. $post->title. ' je bila spremenjena');
+    }
+
+    // Soft delete post
+    public function deletePost($id, Helper $helper)
+    {
+        $post = Post::find($id);
+        if($helper->userAccess($post->user_id))
+        {
+            $post->deleted = true;
+            $post->save();
+            return redirect(route('blog'))->with('status', 'Post '.$post->title.' deleted successfully');
+        }
+        return redirect(route('login'))->with('status', 'Post can be deleted only by author or admin.');
     }
 
 
