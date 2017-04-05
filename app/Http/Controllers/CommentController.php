@@ -34,4 +34,5 @@ class CommentController extends Controller
 
         return redirect(route('posts.show', ['id' => $postId]))->with('status', 'Komentar je bil usepšno shranjen');
     }
+
 }

@@ -26,6 +26,7 @@
             <a href="http://product-details.kekec-apps.com/" target="_blank" class="list-group-item">Tools</a>
             <a href="http://janko-home-page.appspot.com/" target="_blank" class="list-group-item">Aplikacije Python WebApp2</a>
             <a href="http://eshop.kekec-apps.com/" target="_blank" class="list-group-item">Angular Eshop</a>
+            <a href="http://emerald-eon-159115.appspot.com/" target="_blank" class="list-group-item">Ninja Tech Forum</a>
         </div>
     </div>
 
